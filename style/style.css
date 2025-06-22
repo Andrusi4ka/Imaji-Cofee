@@ -26,6 +26,8 @@ body {
     padding: 0 15px;
 }
 
+/*********** HEADER **************/
+
 .navbar {
     padding: 15px 0;
     display: flex;
@@ -93,22 +95,89 @@ body {
     cursor: pointer;
 }
 
+/*********** CONTENT. OUR MENU **************/
+
 .our-menu .heading {
     margin: 85px 0 40px;
     display: flex;
 }
 
 .our-menu .heading .title {
-    width: 70%;
+    font-family: "Montserrat";
+    width: 60%;
 }
 
 .our-menu .heading .title h3 {
     font-size: 85px;
-    font-weight: 100;
+    font-weight: 600;
+    letter-spacing: -5px;
 }
 
 .our-menu .heading .title p {
     font-size: 18px;
     padding-top: 30px;
     line-height: 30px;
+}
+
+.our-menu .content .filter {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.our-menu .content .filter button:hover {
+    cursor: pointer;
+}
+
+.our-menu .content .bl-search {
+    flex: 0 0 50%;
+}
+
+.our-menu .content .bl-price,
+.our-menu .content .bl-sort {
+    width: 100%;
+}
+
+.our-menu .content .one-filter .bl-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.our-menu .content .one-filter .bl-label button {
+    border: none;
+    background: none;
+    color: #F14C35;
+}
+
+.our-menu .content .one-filter .bl-form {
+    position: relative;
+}
+
+.our-menu .content .one-filter .bl-form button {
+    position: absolute;
+    border: none;
+    background: none;
+    z-index: 1;
+}
+
+.our-menu .content .one-filter .bl-form input {
+    box-sizing: border-box;
+    padding: 10px 10px 10px 30px;
+    width: 100%;
+}
+
+.our-menu .content .one-filter .bl-form i {
+    padding-top: 12px;
+    padding-left: 5px;
+    font-size: 11px;
+    color: gray;
+}
+
+.our-menu .content .one-filter .bl-form select {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
 }

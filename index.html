@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imaji Cofee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -81,15 +85,55 @@
             </ul>
         </div>
     </header>
-    <!-- <div class=" container our-menu">
+    <div class="container our-menu">
         <div class="heading">
             <div class="title">
                 <h3>Our Menu</h3>
                 <p>IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for you to support and cheer up your day. We also provide coffee to accompany you at home along with the equipment.</p>
             </div>
-            <div class="delivery"></div>
+            <!-- <div class="delivery"></div> -->
         </div>
-    </div> -->
+        <div class="content">
+            <div class="filter">
+                <div class="bl-search one-filter">
+                    <div class="bl-label">
+                        <label for="search">Search</label>
+                        <button>Clear</button>
+                    </div>
+                    <div class="bl-form">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" id="search" placeholder="Enter keyword">
+                    </div>
+                </div>
+                <div class="bl-price one-filter">
+                    <div class="bl-label">
+                        <label for="price">Price</label>
+                        <button>Clear</button>
+                    </div>
+                    <div class="bl-form">
+                        <select name="prices" id="price">
+                            <option value="price1">Under $10</option>
+                            <option value="price2">Under $20</option>
+                            <option value="price3">Under $30</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bl-sort one-filter">
+                    <div class="bl-label">
+                        <label for="sort">Sort By</label>
+                        <button>Clear</button>
+                    </div>
+                    <div class="bl-form">
+                        <select name="sorts" id="sort">
+                            <option value="sort1">Best Selling</option>
+                            <option value="sort2">Relevant</option>
+                            <option value="sort3">Data</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
