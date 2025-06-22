@@ -1,0 +1,114 @@
+li {
+    list-style-type: none !important;
+}
+
+nav,
+p,
+a,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navbar {
+    padding: 15px 0;
+    display: flex;
+}
+
+.text-title {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.text-title svg {
+    width: 200px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    gap: 30px;
+    width: 70%;
+    font-size: 18px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #121212;
+}
+
+.menu ._navItem a:hover {
+    text-decoration: underline;
+    color: #A27B5C;
+    transition: 0.2s;
+}
+
+.menu .buttons {
+    border: 2px solid #A27B5C;
+    padding: 10px 15px;
+}
+
+.menu .btn-cart {
+    background-color: #A27B5C;
+}
+
+.menu .btn-cart:hover,
+.menu .btn-cart:focus {
+    background-color: #67482f;
+    border: 2px solid #67482f;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.menu .btn-cart a {
+    color: white;
+}
+
+.menu .btn-sign a {
+    color: #A27B5C;
+}
+
+.menu .btn-sign:hover,
+.menu .btn-sign:focus {
+    background-color: #a27b5c3d;
+    cursor: pointer;
+}
+
+.our-menu .heading {
+    margin: 85px 0 40px;
+    display: flex;
+}
+
+.our-menu .heading .title {
+    width: 70%;
+}
+
+.our-menu .heading .title h3 {
+    font-size: 85px;
+    font-weight: 100;
+}
+
+.our-menu .heading .title p {
+    font-size: 18px;
+    padding-top: 30px;
+    line-height: 30px;
+}
