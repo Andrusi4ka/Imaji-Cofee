@@ -25,8 +25,8 @@ li {
   display: flex;
   align-items: center;
 }
-.container .navbar .text-title a svg {
-  width: 200px;
+.container .navbar .text-title a img {
+  width: 220px;
 }
 .container .navbar .menu {
   display: flex;
