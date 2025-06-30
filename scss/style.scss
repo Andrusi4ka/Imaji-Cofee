@@ -68,7 +68,7 @@ li {
                 }
 
                 img {
-                    width: 220px;
+                    width: 180px;
                 }
             }
 
@@ -109,6 +109,11 @@ li {
                 .btn-bar {
                     background: none;
                     border: none;
+
+                    &:hover,
+                    &:focus {
+                        color: #121212;
+                    }
 
                     i {
                         font-size: 30px;
@@ -357,8 +362,16 @@ section {
                         display: flex;
                         justify-content: space-between;
                         border-top: 2px solid rgb(226, 226, 226);
-                        border-bottom: 2px solid rgb(226, 226, 226);
+                        border-bottom: 2px solid #e2e2e2;
                         margin-bottom: 30px;
+
+                        @media (max-width: $tablet) {
+                            overflow: hidden;
+                            justify-content: flex-start;
+                            overflow-x: auto;
+                            scrollbar-width: none;
+                            border: none;
+                        }
 
                         .tabs-item {
                             text-align: center;
@@ -366,9 +379,25 @@ section {
                             text-transform: uppercase;
                             padding: 25px 0 25px;
 
-                            &:hover {
+                            &:hover,
+                            &:active,
+                            &:focus {
                                 cursor: pointer;
                                 box-shadow: 0 2px rgb(53, 53, 53), 0 -2px rgb(53, 53, 53);
+                            }
+
+                            @media (max-width: $tablet) {
+                                min-width: 210px;
+                                display: inline-block;
+                                border-top: 2px solid #e2e2e2;
+                                border-bottom: 2px solid #e2e2e2;
+                            }
+                        }
+
+                        .active {
+                            @media (max-width: $tablet) {
+                                border-top: 2px solid #353535;
+                                border-bottom: 2px solid #353535;
                             }
                         }
                     }
@@ -380,6 +409,14 @@ section {
 
                         .product-card {
                             flex: 0 0 calc((100% - 3 * 20px) / 4);
+
+                            @media (max-width: $tablet) {
+                                flex: 0 0 calc((100% - 20px) / 2);
+                            }
+
+                            @media (max-width: $mobile) {
+                                flex: auto;
+                            }
 
                             &:hover {
                                 cursor: pointer;
@@ -499,7 +536,17 @@ footer {
                 padding-top: 20px;
                 align-items: center;
 
+                @media (max-width: $tablet) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .social-media {
+
+                    @media (max-width: $tablet) {
+                        padding-bottom: 30px;
+                    }
+
                     a {
                         img {
                             width: 20px;
@@ -517,6 +564,10 @@ footer {
                     align-items: center;
                     gap: 20px;
 
+                    @media (max-width: $tablet) {
+                        flex-direction: column;
+                    }
+
                     p {
                         display: inline;
                     }
@@ -530,6 +581,11 @@ footer {
                             }
                         }
                     }
+
+                    &>div {
+                        display: flex;
+                        gap: 20px;
+                    }
                 }
             }
 
@@ -538,6 +594,12 @@ footer {
                 display: flex;
                 justify-content: space-between;
                 color: $primary-color;
+
+                @media (max-width: $tablet) {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
             }
         }
     }

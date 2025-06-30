@@ -62,7 +62,7 @@ li {
   }
 }
 .container .main .navbar .logo-tablet img {
-  width: 220px;
+  width: 180px;
 }
 .container .main .navbar .bl-buttons-tablet {
   display: none;
@@ -98,6 +98,9 @@ li {
 .container .main .navbar .bl-buttons-tablet .btn-bar {
   background: none;
   border: none;
+}
+.container .main .navbar .bl-buttons-tablet .btn-bar:hover, .container .main .navbar .bl-buttons-tablet .btn-bar:focus {
+  color: #121212;
 }
 .container .main .navbar .bl-buttons-tablet .btn-bar i {
   font-size: 30px;
@@ -305,8 +308,17 @@ section .container .our-menu .content .product .tabs {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid rgb(226, 226, 226);
-  border-bottom: 2px solid rgb(226, 226, 226);
+  border-bottom: 2px solid #e2e2e2;
   margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  section .container .our-menu .content .product .tabs {
+    overflow: hidden;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border: none;
+  }
 }
 section .container .our-menu .content .product .tabs .tabs-item {
   text-align: center;
@@ -314,9 +326,23 @@ section .container .our-menu .content .product .tabs .tabs-item {
   text-transform: uppercase;
   padding: 25px 0 25px;
 }
-section .container .our-menu .content .product .tabs .tabs-item:hover {
+section .container .our-menu .content .product .tabs .tabs-item:hover, section .container .our-menu .content .product .tabs .tabs-item:active, section .container .our-menu .content .product .tabs .tabs-item:focus {
   cursor: pointer;
   box-shadow: 0 2px rgb(53, 53, 53), 0 -2px rgb(53, 53, 53);
+}
+@media (max-width: 768px) {
+  section .container .our-menu .content .product .tabs .tabs-item {
+    min-width: 210px;
+    display: inline-block;
+    border-top: 2px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
+  }
+}
+@media (max-width: 768px) {
+  section .container .our-menu .content .product .tabs .active {
+    border-top: 2px solid #353535;
+    border-bottom: 2px solid #353535;
+  }
 }
 section .container .our-menu .content .product .product-list {
   display: flex;
@@ -325,6 +351,16 @@ section .container .our-menu .content .product .product-list {
 }
 section .container .our-menu .content .product .product-list .product-card {
   flex: 0 0 calc((100% - 60px) / 4);
+}
+@media (max-width: 768px) {
+  section .container .our-menu .content .product .product-list .product-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  section .container .our-menu .content .product .product-list .product-card {
+    flex: auto;
+  }
 }
 section .container .our-menu .content .product .product-list .product-card:hover {
   cursor: pointer;
@@ -419,6 +455,17 @@ footer .container .footer-content .bl-media {
   padding-top: 20px;
   align-items: center;
 }
+@media (max-width: 768px) {
+  footer .container .footer-content .bl-media {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  footer .container .footer-content .bl-media .social-media {
+    padding-bottom: 30px;
+  }
+}
 footer .container .footer-content .bl-media .social-media a img {
   width: 20px;
   margin-right: 10px;
@@ -431,6 +478,11 @@ footer .container .footer-content .bl-media .bl-delivery {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  footer .container .footer-content .bl-media .bl-delivery {
+    flex-direction: column;
+  }
+}
 footer .container .footer-content .bl-media .bl-delivery p {
   display: inline;
 }
@@ -440,9 +492,20 @@ footer .container .footer-content .bl-media .bl-delivery a img {
 footer .container .footer-content .bl-media .bl-delivery a img:hover {
   transform: scale(1.1);
 }
+footer .container .footer-content .bl-media .bl-delivery > div {
+  display: flex;
+  gap: 20px;
+}
 footer .container .footer-content .copyright {
   padding: 50px 0 0;
   display: flex;
   justify-content: space-between;
   color: #A27B5C;
+}
+@media (max-width: 768px) {
+  footer .container .footer-content .copyright {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
