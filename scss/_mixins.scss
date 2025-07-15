@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+@mixin quantity {
+    border: 1px solid $primary-color;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: 0 auto;
+
+    button {
+        border: none;
+        background: none;
+        font-size: 24px;
+        padding: 0 15%;
+        cursor: pointer;
+    }
+
+    input {
+        width: 100%;
+        text-align: center;
+        border: none;
+        color: $primary-color;
+    }
+}
+
+@mixin cart__aside {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    &>p {
+        &:first-child {
+            color: $text-color-gray;
+        }
+    }
+}

@@ -42,7 +42,7 @@ modal.addEventListener('click', function () {
     closeModal();
 });
 
-/**************** ситати більше в карточці товару ******************/
+/**************** читати більше в карточці товару ******************/
 let readBtn = document.querySelector("#product .main-info .description .read-more");
 let descr = document.querySelector("#product .main-info .description p");
 readBtn.onclick = () => {
@@ -57,13 +57,13 @@ readBtn.onclick = () => {
 
 /******************* модальне вікно про додавання товару ***************** */
 document.querySelector("#product .main-info .bl-action .btn-add").onclick = () => {
-    document.querySelector(".modal-added").classList.add("show");
+    document.querySelector(".product-added__modal").classList.add("show");
     setTimeout(() => {
-        document.querySelector(".modal-added").classList.remove("show");
+        document.querySelector(".product-added__modal").classList.remove("show");
     }, 4000);
 }
 
-document.querySelector(".modal-added .modal-close").onclick = () => {
-    document.querySelector(".modal-added").classList.remove("show");
+document.querySelector(".product-added__modal .modal-close").onclick = () => {
+    document.querySelector(".product-added__modal").classList.remove("show");
 }
 
