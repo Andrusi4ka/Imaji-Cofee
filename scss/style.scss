@@ -614,13 +614,13 @@ li {
             }
         }
 
-        .overlay {
+        @at-root .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: #ffffffd5;
+            background-color: #b0aca9a6;
             pointer-events: none;
             z-index: 1;
             overflow: hidden;
@@ -1067,7 +1067,7 @@ li {
     aside {
         width: 30%;
         padding: 50px 30px;
-        height: 100vh;
+        height: 90vh;
         background-color: $background-color-sidebar;
         display: flex;
         flex-direction: column;
@@ -1138,122 +1138,126 @@ li {
             }
         }
     }
+}
 
-    /************ FOOTER *****************/
-    footer {
-        background-color: #121212;
-        color: #ffffff;
-        padding: 30px 0 50px;
+/*********** DISCOUNT-PROMO__MODAL ***********/
+.promo__modal {
+    position: fixed;
+    z-index: 10;
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: none;
 
-        .container {
-            .footer-content {
-                .footer-title {
-                    text-align: center;
-                    font-size: 50px;
-                    padding-bottom: 30px;
-                }
+    @media (max-width: $tablet) {
+        width: 90%;
+        padding: 20px;
+    }
 
-                .footer-frame {
-                    text-align: center;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #ffffff;
+    .promo__close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
 
-                    p {
-                        padding: 7px 0 7px;
+    .promo__title {
+        font-size: 28px;
+        padding-bottom: 10px;
+
+        @media (max-width: $tablet) {
+            font-size: 24px;
+        }
+    }
+
+    .promo__subtitle {
+        color: $text-color-gray;
+    }
+
+    .promo__list {
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .promo__item {
+            border: 1px solid $primary-color;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: $tablet) {
+                padding: 15px;
+            }
+
+            .promo__icon {
+                color: $primary-color;
+            }
+
+            .promo__details {
+                .promo__name {
+                    font-size: 18px;
+                    padding-bottom: 10px;
+
+                    @media (max-width: $mobile) {
+                        font-size: 16px;
                     }
                 }
 
-                .bl-media {
-                    display: flex;
-                    justify-content: space-between;
-                    padding-top: 20px;
-                    align-items: center;
+                .promo__timer {
+                    font-size: 16px;
+                    color: $text-color-gray;
 
-                    @media (max-width: $tablet) {
-                        flex-direction: column;
-                        align-items: center;
-                    }
-
-                    .social-media {
-
-                        @media (max-width: $tablet) {
-                            padding-bottom: 30px;
-                        }
-
-                        a {
-                            img {
-                                width: 20px;
-                                margin-right: 10px;
-
-                                &:hover {
-                                    transform: scale(1.1);
-                                }
-                            }
-                        }
-                    }
-
-                    .bl-delivery {
-                        display: flex;
-                        align-items: center;
-                        gap: 20px;
-
-                        @media (max-width: $tablet) {
-                            flex-direction: column;
-                        }
-
-                        p {
-                            display: inline;
-                        }
-
-                        a {
-                            img {
-                                width: 150px;
-
-                                &:hover {
-                                    transform: scale(1.1);
-                                }
-                            }
-                        }
-
-                        &>div {
-                            display: flex;
-                            gap: 20px;
-                        }
+                    @media (max-width: $mobile) {
+                        font-size: 14px;
                     }
                 }
+            }
 
-                .copyright {
-                    padding: 50px 0 0;
-                    display: flex;
-                    justify-content: space-between;
-                    color: $primary-color;
+            .promo__apply {
+                background-color: $primary-color;
+                border: none;
+                padding: 10px 15px;
+                color: #ffffff;
+                margin-left: auto;
+                cursor: pointer;
 
-                    @media (max-width: $tablet) {
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 20px;
-                    }
+                &:hover {
+                    background-color: $primary-color-dark;
+                }
+            }
+        }
+    }
+
+    .promo-disabled__title {
+        font-size: 20px;
+    }
+
+    .promo__list {
+        &:last-child {
+
+            .promo__item {
+                color: $text-color-gray;
+                border: 1px solid $text-color-gray;
+                background-color: $text-color-gray-light;
+
+                .promo__icon {
+                    color: $text-color-gray;
+
                 }
             }
         }
     }
 }
-
-/*********** DISCOUNT-PROMO__MODAL ***********/
-// .discount-promo__modal {
-
-//     position: fixed;
-//     z-index: 10;
-//     width: 500px;
-//     height: 400px;
-//     border-radius: 5px;
-//     background-color: #ffffff;
-//     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     padding: 70px 40px;
-// }
 
 /************ FOOTER *****************/
 footer {
