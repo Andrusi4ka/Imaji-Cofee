@@ -8,177 +8,186 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="main">
-                <a class="logo-desctop" href="#"><img src="images/logo.png" alt="Imaji-Cofee"></a>
-                <div class="navbar">
-                    <a class="logo-tablet" href="#"><img src="images/logo.png" alt="Imaji-Cofee"></a>
-                    <div class="bl-buttons-tablet">
-                        <button class="btn-cart-tablet"><a href=""><i class="fa-solid fa-basket-shopping"></i> <span>2</span></a></button>
-                        <button class="btn-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
-                    </div>
-                    <div class="navbar-menu">
-                        <ul class="menu" id="menu">
-                            <li class="navItem"><a href="index.html">Home</a></li>
-                            <li class="navItem"><a href="">Story</a></li>
-                            <li class="navItem"><a href="">Menu</a></li>
-                            <li class="navItem"><a href="">Space</a></li>
-                            <li class="navItem"><a href="">Community</a></li>
-                            <li class="navItem"><a href="">News</a></li>
-                        </ul>
-                    </div>
-                    <div class="bl-buttons-desctop">
-                        <button class="btn-cart-desctop"><a href="">Cart <span>(2)</span></a></button>
-                        <button class="btn-sign"><a href="">Sign <span>In</span></a></button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </header>
-    <section id="product" class="product-card">
-        <div class="container">
             <div class="row">
-                <div class="main-image">
-                    <div class="preview-image">
-                        <img src="images/products/tab3/Product27.png" alt="Product27">
-                        <img src="images/products/product/Product27(1).png" alt="Product27(1)">
-                        <img src="images/products/product/Product27(2).png" alt="Product27(2)">
-                        <img src="images/products/product/Product27(3).png" alt="Product27(3)">
-                    </div>
-                    <div class="large-image">
-                        <img src="images/products/tab3/Product27.png" alt="Product27">
-                    </div>
-                    <div class="overlay" style="display: none;"></div>
-                    <div class="modal-image" style="display: none;">
-                        <img src="images/products/tab3/Product27.png" alt="Product27">
-                    </div>
-                </div>
-                <div class="main-info">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Detail</a></li>
-                    </ul>
-
-                    <h1 class="name">At Home - Classic</h1>
-
-                    <div class="bl-price">
-                        <div class="price">$5.00 <span>$6.00</span></div>
-                        <p class="promo">Get 20% Off in App</p>
-                    </div>
-
-                    <div class="description">
-                        <h5>Description:</h5>
-                        <p class="hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eos voluptatum aperiam blanditiis quaerat, magnam sed optio explicabo odio. Dolorem, at doloremque. Ea incidunt consequuntur quaerat dolores commodi esse excepturi quos, dolor possimus quam magni
-                            amet, aspernatur
-                            accusantium rem. Id debitis libero consequuntur quis cupiditate ipsa, odio, facilis in eius excepturi placeat illum quasi repellat voluptate, laborum accusamus. Laboriosam consequatur mollitia eius numquam ipsum earum vero? Vitae, obcaecati blanditiis. Unde voluptatibus
-                            hic, odio placeat facilis deserunt natus. Cum tempora sunt laudantium deserunt distinctio, veritatis porro rerum, eum et ipsam harum? Optio omnis tempore explicabo commodi dolorem facilis asperiores tempora recusandae deleniti veniam ab necessitatibus molestiae similique
-                            consequatur voluptatibus expedita et quae aliquid minima, alias laborum sit! Mollitia consequatur eveniet necessitatibus minima quasi quidem aspernatur, consectetur doloremque accusamus nihil, officiis, veritatis vel perspiciatis nemo delectus recusandae! Voluptatibus
-                            eligendi distinctio, omnis nemo nostrum quae in saepe consequatur explicabo voluptatem aliquam recusandae, sequi labore? Modi dicta perspiciatis nihil, doloribus voluptatibus tempora aut! Aliquam illo distinctio inventore ab eos sapiente, nemo nulla, sunt perspiciatis
-                            vero aut in, ad velit. Perspiciatis earum quia inventore assumenda velit. Dolorem atque repellendus itaque autem ipsam sint laboriosam quia minus quam numquam nemo dolore, optio ducimus sit ratione iure.</p>
-                        <button class="read-more">Read more</button>
-                    </div>
-
-                    <div class="bl-action">
-                        <div class="add-cart">
-                            <button class="btn-add">Add to Cart</button>
-                            <div class="bl-quantity">
-                                <button>&minus;</button>
-                                <input type="text" value="1">
-                                <button>+</button>
+                <div class="main-header">
+                    <div class="logo-md d-none d-md-block col-md-2"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                    <div class="navbar col-md-10">
+                        <div class="logo-sm d-block d-md-none"><a class="" href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                        <div class="bl-buttons-sm d-flex d-md-none">
+                            <button class="btn-cart-sm"><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span>2</span></a></button>
+                            <button class="btn-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                        <div class="menu">
+                            <ul class="nav-items" id="menu">
+                                <li class="nav-item"><a href="#">Home</a></li>
+                                <li class="nav-item"><a href="#">Story</a></li>
+                                <li class="nav-item"><a href="#">Menu</a></li>
+                                <li class="nav-item"><a href="#">Space</a></li>
+                                <li class="nav-item"><a href="#">Community</a></li>
+                                <li class="nav-item"><a href="#">News</a></li>
+                                <li class="nav-item d-md-none"><button class="btn-default "><a href="#">Order</a></button></li>
+                                <li class="nav-item d-md-none"><button class="btn-default-outline"><a href="#">Sign In</a></button></li>
+                            </ul>
+                            <div class="bl-buttons-md d-none d-md-flex">
+                                <button class="btn-default"><a href="cart.html">Cart <span>(2)</span></a></button>
+                                <button class="btn-default-outline"><a href="#">Sign In</a></button>
                             </div>
                         </div>
-                        <button class="btn-buy"><a href="cart.html">Buy it Now</a></button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="product-grid featured-product">
-        <div class="container">
-            <h2>You May Also Like</h2>
-            <div class="product-list">
-                <div class="product-item sale">
-                    <a href="product.html">
-                        <div class="product-image">
-                            <img src="images/products/tab1/Product1.png" alt="Product1">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Ristretto Bianco</h3>
-                            <p class="product-description">Only at Cafe and Delivery</p>
-                            <div class="product-price">$5.00 <span>$6.00</span></div>
-                            <p class="product-promo">Get 20% Off in App</p>
-                        </div>
-                    </a>
-                </div>
+    </header>
 
-                <div class="product-item sale">
-                    <a href="product.html">
-                        <div class="product-image">
-                            <img src="images/products/tab1/Product2.png" alt="Product2">
+    <main class="product-page">
+        <section id="product">
+            <div class="container">
+                <div class="row">
+                    <section class="product-images col-lg-7 col-md-6 col-sm-12">
+                        <div class="thumbnail-gallery">
+                            <img src="images/products/tab3/Product27.png" alt="Product27">
+                            <img src="images/products/product/Product27(1).png" alt="Product27(1)">
+                            <img src="images/products/product/Product27(2).png" alt="Product27(2)">
+                            <img src="images/products/product/Product27(3).png" alt="Product27(3)">
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Iced creamy latte</h3>
-                            <p class="product-description">Only at Cafe and Delivery</p>
-                            <div class="product-price">$5.00 <span>$6.00</span></div>
-                            <p class="product-promo">Get 20% Off in App</p>
+                        <div class="main-image">
+                            <img src="images/products/tab3/Product27.png" alt="Product27">
                         </div>
-                    </a>
-                </div>
+                        <div class="modal-image" style="display: none;">
+                            <img src="images/products/tab3/Product27.png" alt="Product27">
+                        </div>
+                    </section>
+                    <section class="product-info col-lg-5 col-md-6 col-sm-12">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li class="active"><a href="#">Detail</a></li>
+                        </ul>
 
-                <div class="product-item sale">
-                    <a href="product.html">
-                        <div class="product-image">
-                            <img src="images/products/tab1/Product3.png" alt="Product3">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Cappuccino</h3>
-                            <p class="product-description">Only at Cafe and Delivery</p>
-                            <div class="product-price">$5.00 <span>$6.00</span></div>
-                            <p class="product-promo">Get 20% Off in App</p>
-                        </div>
-                    </a>
-                </div>
+                        <h1 class="product-name">At Home - Classic</h1>
 
-                <div class="product-item sale">
-                    <a href="product.html">
-                        <div class="product-image">
-                            <img src="images/products/tab1/Product4.png" alt="Product4">
+                        <div class="product-price w-100">
+                            <div class="product-price-current">$5.00 <span>$6.00</span></div>
+                            <p class="promo">Get 20% Off in App</p>
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Iced long black</h3>
-                            <p class="product-description">Only at Cafe and Delivery</p>
-                            <div class="product-price">$5.00 <span>$6.00</span></div>
-                            <p class="product-promo">Get 20% Off in App</p>
+
+                        <div class="product-description">
+                            <h5>Description:</h5>
+                            <p class="hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eos voluptatum aperiam blanditiis quaerat, magnam sed optio explicabo odio. Dolorem, at doloremque. Ea incidunt consequuntur quaerat dolores commodi esse excepturi quos, dolor possimus quam magni
+                                amet, aspernatur
+                                accusantium rem. Id debitis libero consequuntur quis cupiditate ipsa, odio, facilis in eius excepturi placeat illum quasi repellat voluptate, laborum accusamus. Laboriosam consequatur mollitia eius numquam ipsum earum vero? Vitae, obcaecati blanditiis. Unde
+                                voluptatibus
+                                hic, odio placeat facilis deserunt natus. Cum tempora sunt laudantium deserunt distinctio, veritatis porro rerum, eum et ipsam harum? Optio omnis tempore explicabo commodi dolorem facilis asperiores tempora recusandae deleniti veniam ab necessitatibus molestiae
+                                similique
+                                consequatur voluptatibus expedita et quae aliquid minima, alias laborum sit! Mollitia consequatur eveniet necessitatibus minima quasi quidem aspernatur, consectetur doloremque accusamus nihil, officiis, veritatis vel perspiciatis nemo delectus recusandae! Voluptatibus
+                                eligendi distinctio, omnis nemo nostrum quae in saepe consequatur explicabo voluptatem aliquam recusandae, sequi labore? Modi dicta perspiciatis nihil, doloribus voluptatibus tempora aut! Aliquam illo distinctio inventore ab eos sapiente, nemo nulla, sunt perspiciatis
+                                vero aut in, ad velit. Perspiciatis earum quia inventore assumenda velit. Dolorem atque repellendus itaque autem ipsam sint laboriosam quia minus quam numquam nemo dolore, optio ducimus sit ratione iure.</p>
+                            <button class="read-more">Read more</button>
                         </div>
-                    </a>
+
+                        <div class="bl-action">
+                            <div class="add-cart">
+                                <button class="btn-default-outline btn-add-to-cart">Add to Cart</button>
+                                <div class="quantity-selector">
+                                    <button>&minus;</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <button class="btn-default w-100"><a href="cart.html">Buy it Now</a></button>
+                        </div>
+                    </section>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-    <div class="modal-added">
-        <div>
-            <p class="icon"><i class="fa-solid fa-check"></i></p>
-            <p class="text_success">Successfully!</p>
-            <p class="text_added">Product "At Home - Classic" added to cart</p>
+        <section class="product-grid featured-product">
+            <div class="container">
+                <div class="row">
+                    <h2>You May Also Like</h2>
+                    <div class="product-grid">
+                        <div class="product-item sale">
+                            <a href="product.html">
+                                <div class="product-image">
+                                    <img src="images/products/tab1/Product1.png" alt="Product1">
+                                </div>
+                                <div class="category-product-info">
+                                    <h3 class="category-product-name">Ristretto Bianco</h3>
+                                    <p class="category-product-description">Only at Cafe and Delivery</p>
+                                    <div class="category-product-price">$5.00 <span>$6.00</span></div>
+                                    <p class="category-product-promo">Get 20% Off in App</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-item sale">
+                            <a href="product.html">
+                                <div class="product-image">
+                                    <img src="images/products/tab1/Product2.png" alt="Product2">
+                                </div>
+                                <div class="category-product-info">
+                                    <h3 class="category-product-name">Iced creamy latte</h3>
+                                    <p class="category-product-description">Only at Cafe and Delivery</p>
+                                    <div class="category-product-price">$5.00 <span>$6.00</span></div>
+                                    <p class="category-product-promo">Get 20% Off in App</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-item sale">
+                            <a href="product.html">
+                                <div class="product-image">
+                                    <img src="images/products/tab1/Product3.png" alt="Product3">
+                                </div>
+                                <div class="category-product-info">
+                                    <h3 class="category-product-name">Cappuccino</h3>
+                                    <p class="category-product-description">Only at Cafe and Delivery</p>
+                                    <div class="category-product-price">$5.00 <span>$6.00</span></div>
+                                    <p class="category-product-promo">Get 20% Off in App</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-item sale">
+                            <a href="product.html">
+                                <div class="product-image">
+                                    <img src="images/products/tab1/Product4.png" alt="Product4">
+                                </div>
+                                <div class="category-product-info">
+                                    <h3 class="category-product-name">Iced long black</h3>
+                                    <p class="category-product-description">Only at Cafe and Delivery</p>
+                                    <div class="category-product-price">$5.00 <span>$6.00</span></div>
+                                    <p class="category-product-promo">Get 20% Off in App</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="product-added-modal">
             <div>
-                <button class="modal-close">Close</button>
-                <button><a href="cart.html">View Cart</a></button>
+                <p class="icon"><i class="fa-solid fa-check"></i></p>
+                <p class="text_success">Successfully!</p>
+                <p class="text_added">Product "At Home - Classic" added to cart</p>
+                <div>
+                    <button class="btn-default-outline modal-close">Close</button>
+                    <button class="btn-default"><a href="cart.html">View Cart</a></button>
+                </div>
             </div>
         </div>
-    </div>
+
+    </main>
+
     <footer>
         <div class="container">
             <div class="footer-content">

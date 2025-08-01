@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imaji Cofee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="main-header">
+                    <div class="logo-md d-none d-md-block col-md-2"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                    <div class="navbar col-md-10">
+                        <div class="logo-sm d-block d-md-none"><a class="" href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                        <div class="bl-buttons-sm d-flex d-md-none">
+                            <button class="btn-cart-sm"><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span>2</span></a></button>
+                            <button class="btn-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                        <div class="menu">
+                            <ul class="nav-items" id="menu">
+                                <li class="nav-item"><a href="#">Home</a></li>
+                                <li class="nav-item"><a href="#">Story</a></li>
+                                <li class="nav-item"><a href="#">Menu</a></li>
+                                <li class="nav-item"><a href="#">Space</a></li>
+                                <li class="nav-item"><a href="#">Community</a></li>
+                                <li class="nav-item"><a href="#">News</a></li>
+                                <li class="nav-item d-md-none"><button class="btn-default "><a href="#">Order</a></button></li>
+                                <li class="nav-item d-md-none"><button class="btn-default-outline"><a href="#">Sign In</a></button></li>
+                            </ul>
+                            <div class="bl-buttons-md d-none d-md-flex">
+                                <button class="btn-default"><a href="cart.html">Cart <span>(2)</span></a></button>
+                                <button class="btn-default-outline"><a href="#">Sign In</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="checkout-shipping-page">
+        <div class="container">
+            <div class="row">
+                <section class="content col-md-9">
+                    <h1>Checkout</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Checkout</a></li>
+                        <li class="active"><a href="#">Shipping</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+
+                    <div class="checkout-detail">
+                        <div class="row py-2">
+                            <p class="text-gray col-md-2 my-0">Contact</p>
+                            <p class="col-md-10 my-0">imajidigitalstudio@gmail.com</p>
+                        </div>
+                        <div class="row py-2">
+                            <p class="text-gray col-md-2 my-0">Ship to</p>
+                            <p class="col-md-10 my-0">Kellett Ave, Sydney, New South Wales 2011 Australia</p>
+                        </div>
+                    </div>
+
+                    <form class="shipping-method">
+                        <fieldset>
+                            <legend>Shipping Method</legend>
+                            <div class="d-flex justify-content-between align-items-center py-4">
+                                <label class="d-flex gap-3" for="free-shipping">
+                                    <input type="radio" name="free-shipping" value="rad1">
+                                    <p class="d-inline pb-0 mb-0">Free Shipping<br><span class="text-gray">7 - 10 Days</span></p>
+                                </label>
+                                <p class="py-0 my-0">$0</p>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center py-4">
+                                <label class="d-flex gap-3" for="free-shipping">
+                                    <input type="radio" name="free-shipping" value="rad1">
+                                    <p class="d-inline pb-0 mb-0">Regular Shipping<br><span class="text-gray">4 - 7 Days</span></p>
+                                </label>
+                                <p class="py-0 my-0">$7.50</p>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center py-4">
+                                <label class="d-flex gap-3" for="free-shipping">
+                                    <input type="radio" name="free-shipping" value="rad1">
+                                    <p class="d-inline pb-0 mb-0">Express Shipping<br><span class="text-gray">2 - 3 Days</span></p>
+                                </label>
+                                <p class="py-0 my-0">$22.50</p>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center py-4">
+                                <label class="d-flex gap-3" for="free-shipping">
+                                    <input type="radio" name="free-shipping" value="rad1">
+                                    <p class="d-inline pb-0 mb-0">Instan Delivery<br><span class="text-gray">2 - 3 Days</span></p>
+                                </label>
+                                <p class="py-0 my-0">$25.50</p>
+                            </div>
+                        </fieldset>
+
+                    </form>
+
+                    <div class="mt-auto"><button class="btn-default-outline" type="submit"><a href="javascript:history.back()"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></button></div>
+                </section>
+                <aside class="col-md-3">
+                    <h3>Order Items</h3>
+                    <div class="order-info">
+                        <div class="order-item">
+                            <p>At Home - Classic</p>
+                            <p>1 <span>&#215; </span>$4.00</p>
+                        </div>
+                        <div class="order-item">
+                            <p>At Home - Arabica</p>
+                            <p>1 <span>&#215; </span>$5.00</p>
+                        </div>
+                        <div class="order-item">
+                            <p>At Home - House Blend</p>
+                            <p>1 <span>&#215; </span>$5.00</p>
+                        </div>
+                        <div class="order-item">
+                            <p>Tax (10%)</p>
+                            <p>$1.4</p>
+                        </div>
+                        <div class="order-item">
+                            <p>Shipping</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                    <div class="form-promo-code">
+                        <form>
+                            <label for="promo_code">Promo Code</label>
+                            <input type="text" id="promo_code" placeholder="Enter code">
+                        </form>
+                        <button class="btn-default-outline w-100" id="btn-promo">Choose Discount Promo <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
+                    <div class="cart-total-label">
+                        <p>Total</p>
+                        <p>$15.4</p>
+                    </div>
+                    <button class="btn-default"><a href="checkout-payment.html">Payment</a></button>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-title">Our Location</p>
+                <div class="footer-frame">
+                    <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+                    <p>Customer Service +6282-2876-6862</p>
+                    <p>We Are Open from Sun - Mon 10 AM - 22 PM</p>
+                </div>
+                <div class="bl-media">
+                    <div class="social-media">
+                        <a href="#"><img src="images/social-media/spotify.png" alt="spotify"></a>
+                        <a href="#"><img src="images/social-media/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="images/social-media/tik-tok.png" alt="tiktok"></a>
+                        <a href="#"><img src="images/social-media/youtube.png" alt="youtube"></a>
+                        <a href="#"><img src="images/social-media/twitter.png" alt="twitter"></a>
+                        <a href="#"><img src="images/social-media/telegram.png" alt="telegram"></a>
+                    </div>
+                    <div class="bl-delivery">
+                        <p>Delivery Order</p>
+                        <div>
+                            <a href="#"><img src="images/app-store.png" alt="app-store"></a>
+                            <a href="#"><img src="images/google-play.png" alt="google-play"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 IMAJI COFFEE, All rights reserved</p>
+                    <p>Terms and Conditions | Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
