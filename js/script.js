@@ -2,12 +2,13 @@
 $(document).ready(function () {
     $('#menu-bar').on("click", function () {
         $('#menu').toggleClass('menu-tablet');
+        $('header').toggleClass('menu-tablet-background');
     });
 });
 
 /***************** маленькі фото товару *******************/
-let xsImg = Array.from(document.querySelectorAll("#product .preview-image img"));
-let xlImg = document.querySelector("#product .large-image");
+let xsImg = Array.from(document.querySelectorAll("#product .thumbnail-gallery img"));
+let xlImg = document.querySelector("#product .main-image");
 let modal = document.querySelector("#product .modal-image");
 let overlay = document.querySelector("#overlay");
 
@@ -18,39 +19,9 @@ for (let i = 0; i < xsImg.length; i++) {
     }
 }
 
-/**************** модальне вікно з картинкою товару ********************/
-if (xlImg) {
-    xlImg.onclick = function (event) {
-        event.stopPropagation();
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-
-    document.addEventListener('click', function () {
-        if (modal.style.display === 'block') {
-            closeModal();
-        }
-    });
-
-    if (modal) {
-        modal.addEventListener('click', function () {
-            closeModal();
-        });
-    }
-}
-
-
-
 /**************** читати більше в карточці товару ******************/
-let readBtn = document.querySelector("#product .main-info .description .read-more");
-let descr = document.querySelector("#product .main-info .description p");
+let readBtn = document.querySelector("#product .product-info .product-description .read-more");
+let descr = document.querySelector("#product .product-info .product-description p");
 if (readBtn) {
     readBtn.onclick = () => {
         if (descr.classList.contains("hide")) {
@@ -63,38 +34,38 @@ if (readBtn) {
 }
 
 /******************* модальне вікно про додавання товару ***************** */
-let btnAdd = document.querySelector("#product .main-info .bl-action .btn-add");
+let btnAdd = document.querySelector("#product .product-info .bl-action .btn-add-to-cart");
 if (btnAdd) {
     btnAdd.onclick = () => {
-        document.querySelector(".product-added__modal").classList.add("show");
+        document.querySelector(".product-added-modal").classList.add("d-block");
         setTimeout(() => {
-            document.querySelector(".product-added__modal").classList.remove("show");
+            document.querySelector(".product-added-modal").classList.remove("d-block");
         }, 4000);
     }
 
-    document.querySelector(".product-added__modal .modal-close").onclick = () => {
-        document.querySelector(".product-added__modal").classList.remove("show");
+    document.querySelector(".product-added-modal .modal-close").onclick = () => {
+        document.querySelector(".product-added-modal").classList.remove("d-block");
     }
 }
 
 /**************** модальне вікно Discount Promo ********************/
-let modalPromo = document.querySelector('#promo__modal');
-let promoClose = document.querySelector('#promo__close');
-let btnPromo = document.querySelector('#btn__promo');
+let modalPromo = document.querySelector('#promo-modal');
+let promoClose = document.querySelector('#promo-close');
+let btnPromo = document.querySelector('#btn-promo');
 
 
 if (btnPromo) {
     btnPromo.onclick = function () {
-        modalPromo.classList.add('show');
-        overlay.classList.add('show');
+        modalPromo.classList.add('d-block');
+        overlay.classList.add('d-block');
         document.body.style.overflow = 'hidden';
     }
 }
 
 if (promoClose) {
     promoClose.onclick = function () {
-        modalPromo.classList.remove('show');
-        overlay.classList.remove('show');
+        modalPromo.classList.remove('d-block');
+        overlay.classList.remove('d-block');
         document.body.style.overflow = '';
     };
 }
