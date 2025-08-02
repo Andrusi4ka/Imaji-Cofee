@@ -52,7 +52,7 @@
     <main class="checkout-payment-page">
         <div class="container">
             <div class="row">
-                <section class="content col-md-9">
+                <section class="content col-lg-9">
                     <h1>Checkout</h1>
                     <ul class="breadcrumb">
                         <li><a href="#">Checkout</a></li>
@@ -111,11 +111,9 @@
                             </div>
                         </fieldset>
                     </form>
-
-
-                    <div class="mt-auto"><a class="btn-default-outline" href="javascript:history.back()"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></div>
+                    <div class="mt-auto d-none d-lg-block"><a class="btn-default-outline" role="button" onclick="history.back()"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></div>
                 </section>
-                <aside class="col-md-3">
+                <aside class="col-lg-3">
                     <h3>Order Items</h3>
                     <div class="order-info">
                         <div class="order-item">
@@ -142,7 +140,7 @@
                     <div class="form-promo-code">
                         <form>
                             <label for="promo_code">Promo Code</label>
-                            <input type="text" id="promo_code" placeholder="Enter code">
+                            <input class="w-100" type="text" id="promo_code" placeholder="Enter code">
                         </form>
                         <button class="btn-default-outline w-100" id="btn-promo">Choose Discount Promo <span><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
