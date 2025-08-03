@@ -1372,7 +1372,7 @@ footer {
                     }
                 }
 
-                .bl-delivery {
+                @at-root .bl-delivery {
                     display: flex;
                     align-items: center;
                     gap: 20px;
@@ -1502,6 +1502,230 @@ footer {
 
         .line-primary {
             border-left: 2px dashed $color-primary;
+        }
+    }
+}
+
+/******************* HOME-PAGE **********************/
+.home-page {
+    h2 {
+        font-size: 70px;
+
+        @media(max-width: $medium) {
+            font-size: 50px;
+        }
+    }
+
+    .main-banner {
+        h1 {
+            font-size: 80px;
+
+            @media(max-width: $medium) {
+                font-size: 50px;
+            }
+        }
+
+        .main-banner-img {
+            height: 500px;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .main-statistikk {
+        justify-content: space-between;
+
+        .statistical-data {
+            gap: 20px;
+            justify-content: end;
+
+            @media (max-width: $medium) {
+                justify-content: start;
+            }
+
+            &>div {
+                p {
+                    &:first-child {
+                        font-size: 70px;
+
+                        @media (max-width: $medium) {
+                            font-size: 50px;
+                        }
+
+                        @media (max-width: $extra-small) {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-history {
+        background-color: $background-color-sidebar;
+
+        .main-locations {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(9, 40px);
+
+            @media(max-width: $medium) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(18, 40px);
+            }
+
+            @media(max-width: $extra-small) {
+                grid-template-rows: repeat(18, 20px);
+            }
+
+            .location-item {
+                img {
+                    object-fit: cover;
+                }
+
+                &:nth-child(1) {
+                    grid-column: 1;
+                    grid-row: 1/7;
+                }
+
+                &:nth-child(2) {
+                    grid-column: 2;
+                    grid-row: 2/8;
+                }
+
+                &:nth-child(3) {
+                    grid-column: 3;
+                    grid-row: 3/9;
+
+                    @media(max-width: $medium) {
+                        grid-column: 1;
+                        grid-row: 7/14;
+                    }
+                }
+
+                &:nth-child(4) {
+                    grid-column: 4;
+                    grid-row: 4/10;
+
+                    @media(max-width: $medium) {
+                        grid-column: 2;
+                        grid-row: 8/15;
+                    }
+                }
+            }
+        }
+    }
+
+    .imacof {
+        .logo-imacof {
+            img {
+                height: 2rem;
+                background-color: $color-primary;
+                border-radius: 5px;
+            }
+        }
+
+        .main-app {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .main-workspace {
+        background-color: $background-color-sidebar;
+
+        .workspaces {
+            .workspace-items {
+                overflow: hidden;
+                justify-content: flex-start;
+                overflow-x: auto;
+                scrollbar-width: none;
+                white-space: nowrap;
+                gap: 3rem;
+
+                @media (max-width: $large) {
+                    gap: 1.5rem;
+                }
+
+                .slide-item {
+                    min-width: 20%;
+
+                    @media (max-width: $large) {
+                        min-width: 25%;
+                    }
+
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .indicators {
+                .indicator-item {
+                    width: 20px;
+                    height: 20px;
+                    background-color: $color-gray-light;
+                    border-radius: 50%;
+                }
+
+                .active {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .main-grow {
+        .grow-text {
+            width: 35%;
+        }
+
+        .grow-items {
+            width: 65%;
+            overflow: hidden;
+            justify-content: flex-start;
+            overflow-x: auto;
+            scrollbar-width: none;
+            white-space: nowrap;
+            gap: 3rem;
+
+            .grow-item {
+                min-width: 65%;
+                height: 330px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .our-news {
+        background-color: $background-color-sidebar;
+
+        picture {
+            height: 500px;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        ul {
+            li {
+                display: inline;
+
+                &:first-child::after {
+                    content: "\2022";
+                    padding-left: 10px;
+                    padding-right: 7px;
+                }
+            }
         }
     }
 }
