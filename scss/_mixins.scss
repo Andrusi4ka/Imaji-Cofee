@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 @mixin quantity {
-    border: 1px solid $primary-color;
+    border: 1px solid $color-primary;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -18,7 +18,7 @@
         width: 100%;
         text-align: center;
         border: none;
-        color: $primary-color;
+        color: $color-primary;
     }
 }
 

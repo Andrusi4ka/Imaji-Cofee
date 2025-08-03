@@ -49,112 +49,97 @@
             </div>
         </div>
     </header>
-    <main class="checkout-shipping-page">
+    <main class="track-order-page">
         <div class="container">
             <div class="row">
                 <section class="content col-lg-9">
-                    <h1>Checkout</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="checkout-checkout.html">Checkout</a></li>
-                        <li class="active"><a href="#">Shipping</a></li>
-                        <li><a href="checkout-payment.html">Payment</a></li>
-                    </ul>
+                    <h1>Track Order</h1>
 
-                    <div class="order-detail py-3">
-                        <div class="row py-2">
-                            <p class="text-color-gray col-md-2 my-0">Contact</p>
-                            <p class="col-md-10 my-0">imajidigitalstudio@gmail.com</p>
+                    <div class="track-order-list d-flex flex-column pb-5">
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-gray"></i>
+                                <div class="line position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Successfully delivered</p>
+                                <p class="text-color-gray">Thursday, 4 April 2023, 08.17 AM</p>
+                            </div>
                         </div>
-                        <div class="row py-2">
-                            <p class="text-color-gray col-md-2 my-0">Ship to</p>
-                            <p class="col-md-10 my-0">Kellett Ave, Sydney, New South Wales 2011 Australia</p>
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-gray"></i>
+                                <div class="line position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Processed at delivery center</p>
+                                <p class="text-color-gray">Thursday, 4 April 2023, 03.07 AM</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-gray"></i>
+                                <div class="line position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Arrived at sorting center</p>
+                                <p class="text-color-gray">Monday, 3 April 2023, 22.45 PM</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-primary"></i>
+                                <div class="line line-primary position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Shipment en route</p>
+                                <p class="text-color-gray">Monday, 3 April 2023, 22.34 PM</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-primary"></i>
+                                <div class="line line-primary position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Arrived at sorting center</p>
+                                <p class="text-color-gray">Monday, 3 April 2023, 15.33 PM</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start gap-4 mb-4">
+                            <div class="position-relative">
+                                <i class="fa-solid fa-circle-check pt-2 fs-3 text-color-primary"></i>
+                                <div class="line line-primary position-absolute"></div>
+                            </div>
+                            <div class="fs-5">
+                                <p class="text-uppercase">Shipment en route</p>
+                                <p class="text-color-gray">Monday, 3 April 2023, 12.14 PM</p>
+                            </div>
                         </div>
                     </div>
-
-                    <form class="shipping-method">
-                        <fieldset>
-                            <legend>Shipping Method</legend>
-                            <div class="d-flex justify-content-between align-items-center py-4">
-                                <div class="d-flex gap-3">
-                                    <label class="d-flex gap-3" for="free-shipping">
-                                        <input type="radio" name="free-shipping" value="rad1" id="free-shipping">
-                                    </label>
-                                    <p class="d-inline pb-0 mb-0">Free Shipping<br><span class="text-color-gray">7 - 10 Days</span></p>
-                                </div>
-                                <p class="py-0 my-0">$0</p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center py-4">
-                                <div class="d-flex gap-3">
-                                    <label class="d-flex gap-3" for="regular-shipping">
-                                        <input type="radio" name="free-shipping" value="rad1" id="regular-shipping">
-                                    </label>
-                                    <p class="d-inline pb-0 mb-0">Regular Shipping<br><span class="text-color-gray">4 - 7 Days</span></p>
-                                </div>
-                                <p class="py-0 my-0">$7.50</p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center py-4">
-                                <div class="d-flex gap-3">
-                                    <label class="d-flex gap-3" for="express-shipping">
-                                        <input type="radio" name="free-shipping" value="rad1" id="express-shipping">
-                                    </label>
-                                    <p class="d-inline pb-0 mb-0">Express Shipping<br><span class="text-color-gray">2 - 3 Days</span></p>
-                                </div>
-                                <p class="py-0 my-0">$22.50</p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center py-4">
-                                <div class="d-flex gap-3">
-                                    <label class="d-flex gap-3" for="instan-delivery">
-                                        <input type="radio" name="free-shipping" value="rad1" id="instan-delivery">
-                                    </label>
-                                    <p class="d-inline pb-0 mb-0">Instan Delivery<br><span class="text-color-gray">2 - 3 Days</span></p>
-                                </div>
-                                <p class="py-0 my-0">$25.50</p>
-                            </div>
-                        </fieldset>
-
-                    </form>
 
                     <div class="mt-auto d-none d-lg-block"><a class="btn-default-outline" role="button" onclick="history.back()"><span><i class="fa-solid fa-arrow-left"></i></span> Back</a></div>
                 </section>
                 <aside class="col-lg-3">
-                    <h3>Order Items</h3>
+                    <h3>Order Summary</h3>
                     <div class="order-info">
                         <div class="order-item">
-                            <p>At Home - Classic</p>
-                            <p>1 <span>&#215; </span>$4.00</p>
+                            <p>Transaction Date</p>
+                            <p>29 April 2023</p>
                         </div>
                         <div class="order-item">
-                            <p>At Home - Arabica</p>
-                            <p>1 <span>&#215; </span>$5.00</p>
+                            <p>Payment Method</p>
+                            <p>Credit or Debit Card</p>
                         </div>
                         <div class="order-item">
-                            <p>At Home - House Blend</p>
-                            <p>1 <span>&#215; </span>$5.00</p>
+                            <p>Shipping Method</p>
+                            <p>Free Shipping (7 - 10 Days)</p>
                         </div>
-                        <div class="order-item">
-                            <p>Tax (10%)</p>
-                            <p>$1.4</p>
-                        </div>
-                        <div class="order-item">
-                            <p>Shipping</p>
-                            <p>0</p>
-                        </div>
-                    </div>
-                    <div class="form-promo-code">
-                        <form>
-                            <label for="promo_code">Promo Code</label>
-                            <input type="text" id="promo_code" placeholder="Enter code">
-                        </form>
-                        <button class="btn-default-outline w-100" id="btn-promo">Choose Discount Promo <span><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                     <div class="cart-total-label">
                         <p>Total</p>
                         <p>$15.4</p>
                     </div>
-                    <a class="btn-default" href="checkout-payment.html">Payment</a>
                 </aside>
             </div>
         </div>

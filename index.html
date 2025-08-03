@@ -21,22 +21,22 @@
         <div class="container">
             <div class="row">
                 <div class="main-header">
-                    <div class="logo-md d-none d-md-block col-md-2"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                    <div class="logo-md d-none d-md-block col-md-2"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></div>
                     <div class="navbar col-md-10">
-                        <div class="logo-sm d-block d-md-none"><a class="" href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
+                        <div class="logo-sm d-block d-md-none"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></div>
                         <div class="bl-buttons-sm d-flex d-md-none">
                             <a class="btn-cart-sm" href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span>2</span></a>
                             <button class="btn-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
                         </div>
                         <div class="menu">
                             <ul class="nav-items" id="menu">
-                                <li class="nav-item"><a href="#">Home</a></li>
+                                <li class="nav-item active"><a href="index.html">Home</a></li>
                                 <li class="nav-item"><a href="#">Story</a></li>
-                                <li class="nav-item"><a href="#">Menu</a></li>
+                                <li class="nav-item"><a href="cofee.html">Menu</a></li>
                                 <li class="nav-item"><a href="#">Space</a></li>
                                 <li class="nav-item"><a href="#">Community</a></li>
                                 <li class="nav-item"><a href="#">News</a></li>
-                                <li class="d-md-none w-100"><a class="btn-default d-block" href="#">Order</a></li>
+                                <li class="d-md-none w-100"><a class="btn-default d-block" href="order.html">Order</a></li>
                                 <li class="d-md-none w-100"><a class="btn-default-outline d-block" href="#">Sign In</a></li>
                             </ul>
                             <div class="bl-buttons-md d-none d-md-flex">
@@ -49,225 +49,10 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="checkout-payment-page">
         <div class="container">
             <div class="row">
-                <div class="our-menu">
-                    <section class="main-heading">
-                        <div class="title">
-                            <h3 class="text-title">Our Menu</h3>
-                            <p>IMAJI Coffee provides a variety of high quality coffee and drinks and flavors that are suitable for you to support and cheer up your day. We also provide coffee to accompany you at home along with the equipment.</p>
-                        </div>
-                    </section>
 
-                    <div class="main-filters">
-                        <div class="bl-search w-100 filter-item">
-                            <div class="bl-label">
-                                <label for="search">Search</label>
-                                <button>Clear</button>
-                            </div>
-                            <div class="bl-form">
-                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <input type="text" id="search" placeholder="Enter keyword">
-                            </div>
-                        </div>
-                        <div class="product-price w-100 filter-item">
-                            <div class="bl-label">
-                                <label for="price">Price</label>
-                                <button>Clear</button>
-                            </div>
-                            <div class="bl-form">
-                                <select name="prices" id="price">
-                                    <option value="price1">Under $10</option>
-                                    <option value="price2">Under $20</option>
-                                    <option value="price3">Under $30</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="bl-sort w-100 filter-item">
-                            <div class="bl-label">
-                                <label for="sort">Sort By</label>
-                                <button>Clear</button>
-                            </div>
-                            <div class="bl-form">
-                                <select name="sorts" id="sort">
-                                    <option value="sort1">Best Selling</option>
-                                    <option value="sort2">Relevant</option>
-                                    <option value="sort3">Data</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <section class="content">
-                        <div id="tabs" class="category-tabs">
-                            <div class="tab-item active"><a href="#">Cofee and baverage</a></div>
-                            <div class="tab-item"><a href="food.html">Food and snack</a></div>
-                            <div class="tab-item"><a href="imaji.html">Imaji Coffee at home</a></div>
-                        </div>
-                        <div class="product-grid">
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product1.png" alt="Product1">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Ristretto Bianco</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product2.png" alt="Product2">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Iced creamy latte</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product3.png" alt="Product3">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Cappuccino</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product4.png" alt="Product4">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Iced long black</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product5.png" alt="Product5">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">milk coffee regal</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product6.png" alt="Product6">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Orange juice</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product7.png" alt="Product7">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Soda Beverage</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product8.png" alt="Product8">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED Coffee with milk</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product9.png" alt="Product9">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED AMERICANO</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product10.png" alt="Product10">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">vegan iced latte</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product11.png" alt="Product11">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED CHOCOLATE</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab1/Product12.png" alt="Product12">
-                                    </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Autumnal coffee</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="btn-product-more">
-                            <button class="btn-default-outline">Load More</button>
-                        </div>
-                    </section>
-                </div>
             </div>
         </div>
     </main>

@@ -18,6 +18,7 @@ h1 {
 
 h2 {
     font-size: 36px;
+    padding: 10px 0;
 }
 
 h3 {
@@ -25,8 +26,12 @@ h3 {
     padding: 0 0 30px;
 }
 
-.text-gray {
-    color: $text-color-gray;
+.text-color-gray {
+    color: $color-gray;
+}
+
+.text-color-primary {
+    color: $color-primary;
 }
 
 main {
@@ -35,7 +40,7 @@ main {
     .content {
         padding-top: 50px;
         padding-bottom: 50px;
-        min-height: 90vh;
+        min-height: 70vh;
         display: flex;
         flex-direction: column;
 
@@ -48,7 +53,7 @@ main {
 
 aside {
     padding: 50px;
-    min-height: 90vh;
+    min-height: 70vh;
     background-color: $background-color-sidebar;
     display: flex;
     flex-direction: column;
@@ -64,8 +69,8 @@ aside {
 
 .btn-default {
     display: block;
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
     padding: 12px;
     color: #ffffff;
     text-decoration: none;
@@ -73,7 +78,7 @@ aside {
     cursor: pointer;
 
     &:hover {
-        background-color: $primary-color-dark;
+        background-color: $color-primary-dark;
     }
 
     a {
@@ -83,20 +88,20 @@ aside {
 }
 
 .btn-default-outline {
-    border: 1px solid $primary-color;
+    border: 1px solid $color-primary;
     padding: 12px;
     background: none;
-    color: $primary-color;
+    color: $color-primary;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
 
     &:hover {
-        background-color: $primary-color-hover;
+        background-color: $color-primary-hover;
     }
 
     a {
-        color: $primary-color;
+        color: $color-primary;
         text-decoration: none;
     }
 }
@@ -105,7 +110,11 @@ aside {
     li {
         a {
             text-decoration: none;
-            color: $text-color-gray;
+            color: $color-gray;
+
+            &:hover {
+                color: #121212;
+            }
         }
 
         &:after {
@@ -121,6 +130,7 @@ aside {
     .active {
         a {
             color: #121212;
+            cursor: default;
         }
     }
 }
@@ -137,7 +147,7 @@ input {
     &:focus,
     &:focus-visible {
         outline: none;
-        border: 2px solid $primary-color;
+        border: 2px solid $color-primary;
         border-radius: 3px;
     }
 }
@@ -184,7 +194,7 @@ input {
 
 
                 i {
-                    color: $primary-color;
+                    color: $color-primary;
                     font-size: 28px;
                 }
 
@@ -258,14 +268,19 @@ input {
                             bottom: -2px;
                             width: 0;
                             height: 2px;
-                            background: $primary-color;
-
+                            background: $color-primary;
                             transform: translateX(-50%);
                         }
 
                         &:hover::after {
                             width: 80%;
                         }
+                    }
+                }
+
+                .active {
+                    a::after {
+                        width: 80%;
                     }
                 }
             }
@@ -472,100 +487,94 @@ input {
             }
         }
     }
+}
 
-    @at-root .product-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px 20px;
+/**************** PRODUCT-GRID ****************/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 20px;
 
-        .product-item {
-            flex: 0 0 calc((100% - 3 * 20px) / 4);
+    @media (max-width: $medium) {
+        grid-template-columns: repeat(3, 1fr);
 
-            @media (max-width: $medium) {
-                flex: 0 0 calc((100% - 2 * 20px) / 3);
+    }
+
+    @media (max-width: $small) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $extra-small) {
+        grid-template-columns: 1fr;
+    }
+
+    .product-item {
+        &:hover {
+            cursor: pointer;
+            background-color: $color-primary-hover;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        a {
+            color: #121212;
+            text-decoration: none;
+
+            .product-image {
+                position: relative;
+                aspect-ratio: 1 / 1;
+                overflow: hidden;
+
+                &::before {
+                    content: "sale";
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    padding: 15px 20px;
+                    background: #f14c35;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
 
-            @media (max-width: $small) {
-                flex: 0 0 calc((100% - 20px) / 2);
-            }
+            .category-product-info {
+                padding: 0 7px 7px;
 
-            @media (max-width: $extra-small) {
-                flex: auto;
-            }
+                .category-product-name {
+                    padding: 15px 0 15px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
 
-            &:hover {
-                cursor: pointer;
-                background-color: $primary-color-hover;
-                opacity: 0.8;
-                transition: 0.3s;
-            }
+                .category-product-description {
+                    color: $color-gray;
+                }
 
-            a {
-                color: #121212;
-                text-decoration: none;
+                .category-product-price {
+                    color: #121212;
+                    font-size: 22px;
+                    padding: 15px 0 10px;
+                    display: flex;
+                    align-items: center;
 
-                .product-image {
-                    position: relative;
-                    aspect-ratio: 1 / 1;
-                    overflow: hidden;
-
-                    &::before {
-                        content: "sale";
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        text-transform: uppercase;
-                        color: #ffffff;
-                        padding: 15px 20px;
-                        background: #f14c35;
-                    }
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+                    span {
+                        font-size: 22px;
+                        text-decoration: line-through;
+                        padding-left: 5px;
                     }
                 }
 
-                .category-product-info {
-                    padding: 0 7px 7px;
-
-                    .category-product-name {
-                        padding: 15px 0 15px;
-                        text-transform: uppercase;
-                        font-weight: 400;
-                    }
-
-                    .category-product-description {
-                        color: $text-color-gray;
-                    }
-
-                    .category-product-price {
-                        color: #121212;
-                        font-size: 22px;
-                        padding: 15px 0 10px;
-                        display: flex;
-                        align-items: center;
-
-                        span {
-                            font-size: 22px;
-                            text-decoration: line-through;
-                            padding-left: 5px;
-                        }
-                    }
-
-                    .category-product-promo {
-                        color: $primary-color;
-                    }
+                .category-product-promo {
+                    color: $color-primary;
                 }
             }
         }
-    }
-
-    .btn-product-more {
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 70px;
     }
 }
 
@@ -667,7 +676,7 @@ input {
         }
 
         .promo {
-            color: $primary-color;
+            color: $color-primary;
             margin-bottom: 0;
 
             @media (max-width: $small) {
@@ -694,13 +703,13 @@ input {
 
         p {
             line-height: 26px;
-            color: $text-color-gray;
+            color: $color-gray;
         }
 
         .read-more {
             background: none;
             border: none;
-            color: $primary-color;
+            color: $color-primary;
             cursor: pointer;
             margin: 15px 0 0;
         }
@@ -773,7 +782,7 @@ input {
         }
 
         .text_added {
-            color: $text-color-gray;
+            color: $color-gray;
             text-align: center;
             line-height: 24px;
         }
@@ -802,7 +811,7 @@ input {
             justify-content: space-around;
             padding: 15px 0;
             margin: 0;
-            border-bottom: 1px solid $text-color-gray;
+            border-bottom: 1px solid $color-gray;
 
             @media (max-width: $small) {
                 display: none;
@@ -831,7 +840,7 @@ input {
             padding: 0;
 
             .cart-item {
-                border-bottom: 1px solid $text-color-gray;
+                border-bottom: 1px solid $color-gray;
                 padding: 15px 0;
                 display: flex;
                 flex-direction: row;
@@ -880,7 +889,7 @@ input {
 
                             .text_category {
                                 font-size: 12px;
-                                color: $text-color-gray;
+                                color: $color-gray;
                             }
                         }
 
@@ -939,7 +948,7 @@ input {
 
             &>p {
                 &:first-child {
-                    color: $text-color-gray;
+                    color: $color-gray;
                 }
             }
         }
@@ -947,7 +956,7 @@ input {
         @at-root .form-promo-code {
             form {
                 label {
-                    color: $text-color-gray;
+                    color: $color-gray;
                     display: block;
                     padding: 10px 0;
                 }
@@ -995,14 +1004,13 @@ input {
                     margin: 0;
 
                     &:first-child {
-                        color: $text-color-gray;
+                        color: $color-gray;
                     }
                 }
             }
         }
     }
 }
-
 
 /*********** DISCOUNT-PROMO-MODAL ***********/
 .promo-modal {
@@ -1042,7 +1050,7 @@ input {
     }
 
     .promo-subtitle {
-        color: $text-color-gray;
+        color: $color-gray;
     }
 
     .promo-list {
@@ -1053,7 +1061,7 @@ input {
         gap: 15px;
 
         .promo-item {
-            border: 1px solid $primary-color;
+            border: 1px solid $color-primary;
             border-radius: 15px;
             padding: 20px;
             display: flex;
@@ -1065,7 +1073,7 @@ input {
             }
 
             .promo-icon {
-                color: $primary-color;
+                color: $color-primary;
             }
 
             .promo-details {
@@ -1081,7 +1089,7 @@ input {
 
                 .promo-timer {
                     font-size: 16px;
-                    color: $text-color-gray;
+                    color: $color-gray;
                     margin: 0;
 
                     @media (max-width: $extra-small) {
@@ -1091,7 +1099,7 @@ input {
             }
 
             .promo-apply {
-                background-color: $primary-color;
+                background-color: $color-primary;
                 border: none;
                 padding: 10px 15px;
                 color: #ffffff;
@@ -1099,7 +1107,7 @@ input {
                 cursor: pointer;
 
                 &:hover {
-                    background-color: $primary-color-dark;
+                    background-color: $color-primary-dark;
                 }
             }
         }
@@ -1113,12 +1121,12 @@ input {
         &:last-child {
 
             .promo-item {
-                color: $text-color-gray;
-                border: 1px solid $text-color-gray;
-                background-color: $text-color-gray-light;
+                color: $color-gray;
+                border: 1px solid $color-gray;
+                background-color: $color-gray-light;
 
                 .promo-icon {
-                    color: $text-color-gray;
+                    color: $color-gray;
 
                 }
             }
@@ -1142,12 +1150,12 @@ input {
             }
 
             .text-account {
-                color: $text-color-gray;
+                color: $color-gray;
                 padding: 10px 0;
 
                 span {
                     a {
-                        color: $primary-color;
+                        color: $color-primary;
                         text-decoration: none;
                     }
                 }
@@ -1162,8 +1170,8 @@ input {
                     margin: 10px 10px 10px 0;
                     width: 20px;
                     height: 20px;
-                    accent-color: $primary-color;
-                    border: 1px solid $primary-color;
+                    accent-color: $color-primary;
+                    border: 1px solid $color-primary;
                     border-radius: 10px;
                 }
             }
@@ -1261,7 +1269,7 @@ input {
 .checkout-shipping-page {
     .shipping-method {
         &>div {
-            border-bottom: 1px solid $text-color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
 
             &:last-child {
                 border: none;
@@ -1269,7 +1277,7 @@ input {
 
             input {
                 width: 20px;
-                accent-color: $primary-color;
+                accent-color: $color-primary;
                 cursor: pointer;
             }
         }
@@ -1280,7 +1288,7 @@ input {
 .checkout-payment-page {
     .payment-method {
         div {
-            border-bottom: 1px solid $text-color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
 
             &:last-child {
                 border: none;
@@ -1288,7 +1296,7 @@ input {
 
             input[type="radio"] {
                 width: 20px;
-                accent-color: $primary-color;
+                accent-color: $color-primary;
                 cursor: pointer;
             }
         }
@@ -1311,7 +1319,7 @@ input {
     }
 }
 
-/************ FOOTER *****************/
+/****************** FOOTER **********************/
 footer {
     background-color: #121212;
     color: #ffffff;
@@ -1398,7 +1406,7 @@ footer {
                 padding: 50px 0 0;
                 display: flex;
                 justify-content: space-between;
-                color: $primary-color;
+                color: $color-primary;
 
                 @media (max-width: $small) {
                     flex-direction: column;
@@ -1406,6 +1414,94 @@ footer {
                     gap: 20px;
                 }
             }
+        }
+    }
+}
+
+/******************* ORDER-PAGE ***********************/
+.order-page {
+    .thanks {
+        .main-confirmation-img {
+            position: relative;
+            background-image: url(../images/confirmation.gif);
+            border-radius: 25%;
+            margin: 0 auto;
+            box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.8) inset;
+            width: 340px;
+
+            .circle circle {
+                animation: scale;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                stroke-opacity: 0.2;
+
+                @keyframes scale {
+                    50% {
+                        r: 50;
+                    }
+                }
+            }
+
+            i {
+                color: #ffffff;
+                position: absolute;
+                font-size: 40px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        p {
+            span {
+                color: $color-primary;
+            }
+        }
+    }
+
+    @at-root .order-detail {
+        border-bottom: 1px solid $color-gray-light;
+    }
+
+    .order-items-list {
+        .order-item {
+            border-bottom: 1px solid $color-gray-light;
+
+            .order-item-img {
+                width: 150px;
+                aspect-ratio: 1 / 1;
+
+                @media (max-width: $small) {
+                    width: 100px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .order-subtotal {
+        border-bottom: 1px solid $color-gray-light;
+    }
+}
+
+/***************** TRACK-ORDER-PAGE *******************/
+.track-order-page {
+    .track-order-list {
+        .line {
+            left: 50%;
+            top: 35px;
+            width: 2px;
+            height: 100%;
+            border-left: 2px dashed $color-gray;
+        }
+
+        .line-primary {
+            border-left: 2px dashed $color-primary;
         }
     }
 }

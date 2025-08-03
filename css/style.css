@@ -13,6 +13,7 @@ h1 {
 
 h2 {
   font-size: 36px;
+  padding: 10px 0;
 }
 
 h3 {
@@ -20,8 +21,12 @@ h3 {
   padding: 0 0 30px;
 }
 
-.text-gray {
+.text-color-gray {
   color: #7F7F7F;
+}
+
+.text-color-primary {
+  color: #A27B5C;
 }
 
 main {
@@ -30,7 +35,7 @@ main {
 main .content {
   padding-top: 50px;
   padding-bottom: 50px;
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +48,7 @@ main .content {
 
 aside {
   padding: 50px;
-  min-height: 90vh;
+  min-height: 70vh;
   background-color: #FCF7EF;
   display: flex;
   flex-direction: column;
@@ -97,6 +102,9 @@ aside {
   text-decoration: none;
   color: #7F7F7F;
 }
+.breadcrumb li a:hover {
+  color: #121212;
+}
 .breadcrumb li:after {
   content: ">";
   padding: 0 10px;
@@ -106,6 +114,7 @@ aside {
 }
 .breadcrumb .active a {
   color: #121212;
+  cursor: default;
 }
 
 select,
@@ -241,6 +250,9 @@ input:focus-visible {
   transform: translateX(-50%);
 }
 .main-header .navbar .menu .nav-items .nav-item a:hover::after {
+  width: 80%;
+}
+.main-header .navbar .menu .nav-items .active a::after {
   width: 80%;
 }
 .main-header .navbar .menu .menu-tablet {
@@ -419,27 +431,26 @@ input:focus-visible {
     border-bottom: 2px solid #353535;
   }
 }
+
+/**************** PRODUCT-GRID ****************/
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px 20px;
-}
-.product-grid .product-item {
-  flex: 0 0 calc((100% - 60px) / 4);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 20px;
 }
 @media (max-width: 992px) {
-  .product-grid .product-item {
-    flex: 0 0 calc((100% - 40px) / 3);
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .product-grid .product-item {
-    flex: 0 0 calc((100% - 20px) / 2);
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 576px) {
-  .product-grid .product-item {
-    flex: auto;
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
 .product-grid .product-item:hover {
@@ -497,12 +508,6 @@ input:focus-visible {
 }
 .product-grid .product-item a .category-product-info .category-product-promo {
   color: #A27B5C;
-}
-
-.our-menu .btn-product-more {
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 70px;
 }
 
 /************ FEATURED-PRODUCT *****************/
@@ -1162,7 +1167,7 @@ legend {
   flex: 2;
 }
 
-/************ FOOTER *****************/
+/****************** FOOTER **********************/
 footer {
   background-color: #121212;
   color: #ffffff;
@@ -1240,4 +1245,72 @@ footer .container .footer-content .copyright {
     align-items: center;
     gap: 20px;
   }
+}
+
+/******************* ORDER-PAGE ***********************/
+.order-page .thanks .main-confirmation-img {
+  position: relative;
+  background-image: url(../images/confirmation.gif);
+  border-radius: 25%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.8) inset;
+  width: 340px;
+}
+.order-page .thanks .main-confirmation-img .circle circle {
+  animation: scale;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  stroke-opacity: 0.2;
+}
+@keyframes scale {
+  50% {
+    r: 50;
+  }
+}
+.order-page .thanks .main-confirmation-img i {
+  color: #ffffff;
+  position: absolute;
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.order-page .thanks p span {
+  color: #A27B5C;
+}
+.order-detail {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.order-page .order-items-list .order-item {
+  border-bottom: 1px solid #e2e2e2;
+}
+.order-page .order-items-list .order-item .order-item-img {
+  width: 150px;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 768px) {
+  .order-page .order-items-list .order-item .order-item-img {
+    width: 100px;
+  }
+}
+.order-page .order-items-list .order-item .order-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.order-page .order-subtotal {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+/***************** TRACK-ORDER-PAGE *******************/
+.track-order-page .track-order-list .line {
+  left: 50%;
+  top: 35px;
+  width: 2px;
+  height: 100%;
+  border-left: 2px dashed #7F7F7F;
+}
+.track-order-page .track-order-list .line-primary {
+  border-left: 2px dashed #A27B5C;
 }/*# sourceMappingURL=style.css.map */
