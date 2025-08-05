@@ -11,19 +11,25 @@
 /*************** GENERELL **************/
 
 h1 {
-    padding: 0 0 50px;
+    font-size: 5rem;
     margin: 0;
-    font-size: 50px;
+
+    @media (max-width: $medium) {
+        font-size: 3rem;
+    }
 }
 
 h2 {
-    font-size: 36px;
-    padding: 10px 0;
+    font-size: 4rem;
+    margin: 0;
+
+    @media (max-width: $medium) {
+        font-size: 2rem;
+    }
 }
 
 h3 {
-    font-size: 28px;
-    padding: 0 0 30px;
+    font-size: 1.5rem;
 }
 
 .text-color-gray {
@@ -32,6 +38,10 @@ h3 {
 
 .text-color-primary {
     color: $color-primary;
+}
+
+.bg-primary-light {
+    background-color: $color-primary-light;
 }
 
 main {
@@ -54,7 +64,7 @@ main {
 aside {
     padding: 50px;
     min-height: 70vh;
-    background-color: $background-color-sidebar;
+    background-color: $color-primary-light;
     display: flex;
     flex-direction: column;
 
@@ -139,6 +149,7 @@ select,
 input {
     width: 100%;
     padding: 12px;
+    border: 1px solid #272727;
 
     @media (max-width: $medium) {
         padding: 6px;
@@ -152,52 +163,15 @@ input {
     }
 }
 
-/*********** HEADER **************/
+/*********** HEADER готово сторінка home як приклад **************/
 .main-header {
-    padding-top: 30px;
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media(max-width: $small) {
-        padding-top: 50px;
-    }
-
-    .navbar {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-
-        @media (max-width: $small) {
-            flex-basis: 100%;
-            flex-grow: 1;
-        }
-
-        .logo-sm {
+    nav {
+        .logo-md {
             width: 40%;
-            margin-right: auto;
         }
 
-        .bl-buttons-sm {
-            @media (max-width: $small) {
-                display: flex;
-                gap: 40px;
-            }
-
-            .btn-cart-sm {
-                background: none;
-                border: none;
-                position: relative;
-
-
-                i {
-                    color: $color-primary;
-                    font-size: 28px;
-                }
-
+        .bl-buttons-md {
+            .btn-cart-md {
                 &>span {
                     position: absolute;
                     background-color: #FFA90B;
@@ -207,60 +181,18 @@ input {
                     padding: 4px 11px;
                     border-radius: 20px;
                 }
-
-            }
-
-            .btn-bar {
-                background: none;
-                border: none;
-
-                &:hover,
-                &:focus {
-                    color: #121212;
-                }
-
-                i {
-                    font-size: 30px;
-                }
             }
         }
 
         .menu {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-
             @media (max-width: $medium) {
-                gap: 15px;
-            }
-
-            @media (max-width: $small) {
                 flex-basis: 100%;
                 flex-grow: 1;
             }
 
             .nav-items {
-                display: flex;
-                align-items: center;
-                margin: 0;
-                gap: 30px;
-                font-size: 16px;
-
-                @media (min-width: $small) and (max-width: $medium) {
-                    gap: 15px;
-                    font-size: 14px;
-                }
-
-                @media (max-width: $small) {
-                    display: none;
-                }
-
                 .nav-item {
                     a {
-                        color: #121212;
-                        position: relative;
-                        text-decoration: none;
-
                         &::after {
                             content: '';
                             position: absolute;
@@ -286,14 +218,14 @@ input {
             }
 
             //додається через скрипт js
-            .menu-tablet {
+            @at-root .menu-tablet {
                 padding: 10px;
-                display: flex;
                 flex-direction: column;
                 gap: 10px;
                 width: 100%;
                 margin-top: 70px;
                 font-size: 20px;
+                text-align: center;
 
                 li {
                     a {
@@ -302,58 +234,19 @@ input {
                 }
 
                 @at-root .menu-tablet-background {
-                    background-color: $background-color-sidebar;
-                }
-            }
-        }
-
-        .bl-buttons-md {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-
-            @media (max-width: $medium) {
-                gap: 15px;
-            }
-
-            button {
-                @media (max-width: $medium) {
-                    padding: 6px 10px;
+                    background-color: $color-primary-light;
                 }
             }
         }
     }
 }
 
-/*********** CONTENT. OUR-MENU **************/
-.our-menu {
-    .main-heading {
-        margin: 85px 0 40px;
-        display: flex;
-
+/*********** CONTENT. OUR-MENU готово **************/
+.menu-page {
+    .our-menu {
         .title {
             font-family: "Montserrat";
             width: 60%;
-
-            .text-title {
-                font-size: 85px;
-                font-weight: 600;
-                letter-spacing: -5px;
-
-                @media (max-width: $medium) {
-                    font-size: 60px;
-                }
-
-                @media (max-width: $extra-small) {
-                    font-size: 50px;
-                }
-            }
-
-            p {
-                font-size: 18px;
-                padding-top: 30px;
-                line-height: 30px;
-            }
 
             @media (max-width: $medium) {
                 width: 100%;
@@ -362,86 +255,20 @@ input {
     }
 
     .main-filters {
-        display: flex;
-        justify-content: space-between;
-        gap: 50px;
-        padding-bottom: 50px;
-
-        @media (max-width: $small) {
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        button {
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        .bl-search {
-            flex: 0 0 50%;
-
-            @media (max-width: $small) {
-                flex: 0 0 100%;
-            }
-        }
-
-        .bl-sort {
-            width: 100%;
-        }
-
         .filter-item {
-            .bl-label {
-                display: flex;
-                justify-content: space-between;
-                font-size: 14px;
-                padding-bottom: 10px;
-
-                button {
-                    border: none;
-                    background: none;
-                    color: #F14C35;
-                }
-            }
-
             .bl-form {
-                position: relative;
-
-                button {
-                    position: absolute;
-                    border: none;
-                    background: none;
-                    z-index: 1;
-                }
-
-                input {
-                    box-sizing: border-box;
-                    padding: 10px 10px 10px 30px;
-                    width: 100%;
-                }
-
-                i {
-                    padding-top: 15px;
-                    padding-left: 10px;
-                    font-size: 11px;
-                    color: gray;
-                }
-
-                select {
-                    box-sizing: border-box;
-                    padding: 10px;
-                    width: 100%;
+                span {
+                    top: 50%;
+                    transform: translate(0, -50%);
                 }
             }
         }
     }
 
     .category-tabs {
-        display: flex;
         justify-content: space-between;
         border-top: 2px solid #e2e2e2;
         border-bottom: 2px solid #e2e2e2;
-        margin-bottom: 30px;
 
         @media (max-width: $small) {
             overflow: hidden;
@@ -452,14 +279,10 @@ input {
         }
 
         .tab-item {
-            text-align: center;
-            width: 100%;
-            text-transform: uppercase;
 
             &:hover,
             &:active,
             &:focus {
-                cursor: pointer;
                 box-shadow: 0 2px #353535, 0 -2px #353535;
             }
 
@@ -468,13 +291,6 @@ input {
                 display: inline-block;
                 border-top: 2px solid #e2e2e2;
                 border-bottom: 2px solid #e2e2e2;
-            }
-
-            a {
-                color: #121212;
-                text-decoration: none;
-                padding: 25px 0 25px;
-                display: block;
             }
         }
 
@@ -489,11 +305,9 @@ input {
     }
 }
 
-/**************** PRODUCT-GRID ****************/
+/**************** PRODUCT-GRID готово ****************/
 .product-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px 20px;
 
     @media (max-width: $medium) {
         grid-template-columns: repeat(3, 1fr);
@@ -516,76 +330,17 @@ input {
             transition: 0.3s;
         }
 
-        a {
-            color: #121212;
-            text-decoration: none;
-
-            .product-image {
-                position: relative;
+        .product-image {
+            img {
                 aspect-ratio: 1 / 1;
-                overflow: hidden;
-
-                &::before {
-                    content: "sale";
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    text-transform: uppercase;
-                    color: #ffffff;
-                    padding: 15px 20px;
-                    background: #f14c35;
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .category-product-info {
-                padding: 0 7px 7px;
-
-                .category-product-name {
-                    padding: 15px 0 15px;
-                    text-transform: uppercase;
-                    font-weight: 400;
-                }
-
-                .category-product-description {
-                    color: $color-gray;
-                }
-
-                .category-product-price {
-                    color: #121212;
-                    font-size: 22px;
-                    padding: 15px 0 10px;
-                    display: flex;
-                    align-items: center;
-
-                    span {
-                        font-size: 22px;
-                        text-decoration: line-through;
-                        padding-left: 5px;
-                    }
-                }
-
-                .category-product-promo {
-                    color: $color-primary;
-                }
             }
         }
     }
 }
 
-/************ FEATURED-PRODUCT *****************/
+/************ FEATURED-PRODUCT готово *****************/
 .featured-product {
-    background-color: $background-color-sidebar;
-    padding: 70px 0 70px;
-
-    h2 {
-        padding-bottom: 50px;
-    }
+    background-color: $color-primary-light;
 }
 
 /************ PRODUCT-PAGE *****************/
@@ -1284,7 +1039,7 @@ input {
     }
 }
 
-/************ CHECKOUT-PAYMENT-PAGE **************/
+/************ CHECKOUT-PAYMENT-PAGE готово **************/
 .checkout-payment-page {
     .payment-method {
         div {
@@ -1319,100 +1074,20 @@ input {
     }
 }
 
-/****************** FOOTER **********************/
+/****************** FOOTER готово **********************/
 footer {
     background-color: #121212;
-    color: #ffffff;
-    padding: 30px 0 50px;
 
-    .container {
-        .footer-content {
-            .footer-title {
-                text-align: center;
-                font-size: 50px;
-                padding-bottom: 30px;
+    @at-root .mobile-app {
+        .social-media {
+            img {
+                width: 20px;
             }
+        }
 
-            .footer-frame {
-                text-align: center;
-                padding-bottom: 20px;
-                border-bottom: 1px solid #ffffff;
-
-                p {
-                    padding: 7px 0 7px;
-                }
-            }
-
-            .bl-media {
-                display: flex;
-                justify-content: space-between;
-                padding-top: 20px;
-                align-items: center;
-
-                @media (max-width: $small) {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .social-media {
-
-                    @media (max-width: $small) {
-                        padding-bottom: 30px;
-                    }
-
-                    a {
-                        img {
-                            width: 20px;
-                            margin-right: 10px;
-
-                            &:hover {
-                                transform: scale(1.1);
-                            }
-                        }
-                    }
-                }
-
-                @at-root .bl-delivery {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-
-                    @media (max-width: $small) {
-                        flex-direction: column;
-                    }
-
-                    p {
-                        display: inline;
-                    }
-
-                    a {
-                        img {
-                            width: 150px;
-
-                            &:hover {
-                                transform: scale(1.1);
-                            }
-                        }
-                    }
-
-                    &>div {
-                        display: flex;
-                        gap: 20px;
-                    }
-                }
-            }
-
-            .copyright {
-                padding: 50px 0 0;
-                display: flex;
-                justify-content: space-between;
-                color: $color-primary;
-
-                @media (max-width: $small) {
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                }
+        img {
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
@@ -1489,7 +1164,7 @@ footer {
     }
 }
 
-/***************** TRACK-ORDER-PAGE *******************/
+/***************** TRACK-ORDER-PAGE готово *******************/
 .track-order-page {
     .track-order-list {
         .line {
@@ -1506,40 +1181,17 @@ footer {
     }
 }
 
-/******************* HOME-PAGE **********************/
+/******************* HOME-PAGE готово *****************/
 .home-page {
-    h2 {
-        font-size: 70px;
-
-        @media(max-width: $medium) {
-            font-size: 50px;
-        }
-    }
-
     .main-banner {
-        h1 {
-            font-size: 80px;
-
-            @media(max-width: $medium) {
-                font-size: 50px;
-            }
-        }
-
         .main-banner-img {
             height: 500px;
-
-            img {
-                object-fit: cover;
-            }
         }
 
     }
 
     .main-statistikk {
-        justify-content: space-between;
-
         .statistical-data {
-            gap: 20px;
             justify-content: end;
 
             @media (max-width: $medium) {
@@ -1565,26 +1217,18 @@ footer {
     }
 
     .main-history {
-        background-color: $background-color-sidebar;
+        background-color: $color-primary-light;
 
         .main-locations {
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(9, 40px);
+            grid-template-rows: repeat(9, 4rem);
 
             @media(max-width: $medium) {
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(18, 40px);
-            }
-
-            @media(max-width: $extra-small) {
-                grid-template-rows: repeat(18, 20px);
+                grid-template-rows: repeat(14, 3rem);
             }
 
             .location-item {
-                img {
-                    object-fit: cover;
-                }
-
                 &:nth-child(1) {
                     grid-column: 1;
                     grid-row: 1/7;
@@ -1626,21 +1270,13 @@ footer {
                 border-radius: 5px;
             }
         }
-
-        .main-app {
-            img {
-                width: 100%;
-            }
-        }
     }
 
-    .main-workspace {
-        background-color: $background-color-sidebar;
+    .comfy-workspace {
+        background-color: $color-primary-light;
 
         .workspaces {
             .workspace-items {
-                overflow: hidden;
-                justify-content: flex-start;
                 overflow-x: auto;
                 scrollbar-width: none;
                 white-space: nowrap;
@@ -1657,8 +1293,12 @@ footer {
                         min-width: 25%;
                     }
 
-                    img {
-                        object-fit: cover;
+                    @media (max-width: $medium) {
+                        min-width: 40%;
+                    }
+
+                    @media (max-width: $small) {
+                        min-width: 70%;
                     }
                 }
             }
@@ -1681,6 +1321,10 @@ footer {
     .main-grow {
         .grow-text {
             width: 35%;
+
+            @media (max-width: $medium) {
+                width: 100%;
+            }
         }
 
         .grow-items {
@@ -1692,38 +1336,117 @@ footer {
             white-space: nowrap;
             gap: 3rem;
 
+            @media (max-width: $medium) {
+                width: 100%;
+                gap: 1.5rem;
+            }
+
             .grow-item {
                 min-width: 65%;
                 height: 330px;
             }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
         }
     }
 
-    .our-news {
-        background-color: $background-color-sidebar;
+    @at-root .our-news {
+        background-color: $color-primary-light;
 
-        picture {
+        .our-news-img {
             height: 500px;
-
-            img {
-                object-fit: cover;
-            }
         }
 
-        ul {
+        @at-root .news-date {
             li {
-                display: inline;
-
                 &:first-child::after {
                     content: "\2022";
                     padding-left: 10px;
                     padding-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+/****************** NEWS PAGE готово *******************/
+.news-page {
+    .news-items {
+        .news-item {
+            border-bottom: 1px solid $color-gray-light;
+
+            &:last-child {
+                border: none;
+            }
+
+            img {
+                aspect-ratio: 4/3;
+            }
+        }
+    }
+}
+
+/*************** STORY PAGE готово ******************/
+.story-page {
+    .main-story-img {
+        img {
+            aspect-ratio: 21/9;
+        }
+    }
+
+    .other-news {
+        background-color: $color-primary-light;
+
+        .other-news-item {
+            img {
+                aspect-ratio: 4/3;
+            }
+        }
+    }
+}
+
+/************ EVENT LIST готово ****************/
+.event-list-page {
+    .upcoming-events {
+        img {
+            object-fit: cover;
+            aspect-ratio: 1/1;
+
+            @media (max-width: $small) {
+                aspect-ratio: 2/1;
+            }
+        }
+    }
+
+    .events-closed {
+        .events-closed-items {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            @media (max-width: $small) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-gap: 1rem;
+            }
+
+            .events-closed-item {
+                &:nth-child(1) {
+                    grid-column: 1/3;
+
+                    @media (max-width: $small) {
+                        grid-column: auto;
+                    }
+
+                    img {
+                        aspect-ratio: 2/1;
+                    }
+                }
+
+                img {
+                    aspect-ratio: 1/1;
+
+                    @media (max-width: $small) {
+                        aspect-ratio: 2/1;
+                    }
                 }
             }
         }

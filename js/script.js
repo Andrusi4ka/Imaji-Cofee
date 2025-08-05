@@ -2,6 +2,7 @@
 $(document).ready(function () {
     $('#menu-bar').on("click", function () {
         $('#menu').toggleClass('menu-tablet');
+        $('#menu').toggleClass('d-none');
         $('header').toggleClass('menu-tablet-background');
     });
 });
@@ -68,4 +69,23 @@ if (promoClose) {
         overlay.classList.remove('d-block');
         document.body.style.overflow = '';
     };
+}
+
+/*************** HOME PAGE ****************/
+if (window.location.href.includes("index")) {
+    const appItems = document.querySelector(".app-items");
+    const mainApp = document.querySelector(".main-app");
+    const mainWorkspace = document.querySelector(".comfy-workspace");
+    resizeHeight();
+
+    function resizeHeight() {
+        mainApp.style.height = Math.round(appItems.offsetHeight * 0.2) + 'px';
+        mainWorkspace.style.paddingTop = Math.round(appItems.offsetHeight * 0.8) + 'px';
+        appItems.style.position = "absolute";
+        console.log(Math.round(appItems.offsetHeight * 0.2) + 'px');
+    }
+
+    window.addEventListener('resize', () => {
+        resizeHeight();
+    });
 }

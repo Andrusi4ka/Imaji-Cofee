@@ -31,11 +31,11 @@
                         <div class="menu">
                             <ul class="nav-items" id="menu">
                                 <li class="nav-item"><a href="index.html">Home</a></li>
-                                <li class="nav-item"><a href="#">Story</a></li>
+                                <li class="nav-item"><a href="st">Story</a></li>
                                 <li class="nav-item active"><a href="#">Menu</a></li>
                                 <li class="nav-item"><a href="#">Space</a></li>
                                 <li class="nav-item"><a href="#">Community</a></li>
-                                <li class="nav-item"><a href="#">News</a></li>
+                                <li class="nav-item"><a href="news.html">News</a></li>
                                 <li class="d-md-none w-100"><a class="btn-default d-block" href="order.html">Order</a></li>
                                 <li class="d-md-none w-100"><a class="btn-default-outline d-block" href="#">Sign In</a></li>
                             </ul>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="menu-page">
         <div class="container">
             <div class="row">
                 <div class="our-menu">
@@ -60,21 +60,23 @@
                         </div>
                     </section>
 
-                    <div class="main-filters">
-                        <div class="bl-search w-100 filter-item">
-                            <div class="bl-label">
+                    <div class="main-filters row py-4">
+
+                        <div class="filter-item col-md-6 pb-3">
+                            <div class="d-flex justify-content-between pb-1">
                                 <label for="search">Search</label>
-                                <button>Clear</button>
+                                <button class="text-danger border-0 bg-transparent cursor-pointer">Clear</button>
                             </div>
-                            <div class="bl-form">
-                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <input type="text" id="search" placeholder="Enter keyword">
+                            <div class="bl-form position-relative">
+                                <span class="position-absolute z-1 ps-3 text-color-gray"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input class="ps-5" type="text" id="search" placeholder="Enter keyword">
                             </div>
                         </div>
-                        <div class="product-price w-100 filter-item">
-                            <div class="bl-label">
+
+                        <div class="filter-item col-md-3 pb-3">
+                            <div class="d-flex justify-content-between pb-1">
                                 <label for="price">Price</label>
-                                <button>Clear</button>
+                                <button class="text-danger border-0 bg-transparent cursor-pointer">Clear</button>
                             </div>
                             <div class="bl-form">
                                 <select name="prices" id="price">
@@ -84,10 +86,11 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="bl-sort w-100 filter-item">
-                            <div class="bl-label">
+
+                        <div class="filter-item col-md-3 pb-3">
+                            <div class="d-flex justify-content-between pb-1">
                                 <label for="sort">Sort By</label>
-                                <button>Clear</button>
+                                <button class="text-danger border-0 bg-transparent cursor-pointer">Clear</button>
                             </div>
                             <div class="bl-form">
                                 <select name="sorts" id="sort">
@@ -97,171 +100,184 @@
                                 </select>
                             </div>
                         </div>
+
                     </div>
 
                     <section class="content">
-                        <div class="category-tabs">
-                            <div class="tab-item"><a href="cofee.html">Cofee and baverage</a></div>
-                            <div class="tab-item"><a href="food.html">Food and snack</a></div>
-                            <div class="tab-item active"><a href="#">Imaji Coffee at home</a></div>
+                        <div class="category-tabs d-flex mb-4">
+                            <div class="tab-item w-100 text-center text-uppercase"><a href="cofee.html" class="d-block text-dark text-decoration-none py-4">Cofee and baverage</a></div>
+                            <div class="tab-item w-100 text-center text-uppercase"><a href="food.html" class="d-block text-dark text-decoration-none py-4">Food and snack</a></div>
+                            <div class="tab-item w-100 text-center text-uppercase active"><a href="#" class="d-block text-dark text-decoration-none py-4">Imaji Coffee at home</a></div>
                         </div>
-                        <div class="product-grid">
+                        <div class="product-grid d-grid gap-4">
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product25.png" alt="Product1">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product25.png" alt="Product1">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Ristretto Bianco</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Ristretto Bianco</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product26.png" alt="Product2">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product26.png" alt="Product2">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Iced creamy latte</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Iced creamy latte</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product27.png" alt="Product3">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product27.png" alt="Product3">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Cappuccino</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Cappuccino</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product28.png" alt="Product4">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product28.png" alt="Product4">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Iced long black</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Iced long black</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product29.png" alt="Product5">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product29.png" alt="Product5">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">milk coffee regal</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">milk coffee regal</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product30.png" alt="Product6">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product30.png" alt="Product6">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Orange juice</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Orange juice</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product31.png" alt="Product7">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product31.png" alt="Product7">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Soda Beverage</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Soda Beverage</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item sale">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product32.png" alt="Product8">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product32.png" alt="Product8">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED Coffee with milk</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">ICED Coffee with milk</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product33.png" alt="Product9">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product33.png" alt="Product9">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED AMERICANO</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">ICED AMERICANO</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product34.png" alt="Product10">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product34.png" alt="Product10">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">vegan iced latte</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">vegan iced latte</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product35.png" alt="Product11">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product35.png" alt="Product11">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">ICED CHOCOLATE</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">ICED CHOCOLATE</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                             <div class="product-item">
-                                <a href="product.html">
-                                    <div class="product-image">
-                                        <img src="images/products/tab3/Product36.png" alt="Product12">
+                                <a class="text-dark text-decoration-none" href="product.html">
+                                    <div class="product-image position-relative">
+                                        <img class="w-100 h-100 object-fit-cover" src="images/products/tab3/Product36.png" alt="Product12">
                                     </div>
-                                    <div class="category-product-info">
-                                        <h3 class="category-product-name">Autumnal coffee</h3>
-                                        <p class="category-product-description">Only at Cafe and Delivery</p>
-                                        <div class="category-product-price">$5.00 <span>$6.00</span></div>
-                                        <p class="category-product-promo">Get 20% Off in App</p>
+                                    <div class="category-product-info p-2">
+                                        <h3 class="category-product-name text-uppercase fw-normal">Autumnal coffee</h3>
+                                        <p class="category-product-description text-color-gray">Only at Cafe and Delivery</p>
+                                        <p class="category-product-price d-flex align-items-center fs-3 m-0">$5.00 <span class="fs-4 ps-2 text-decoration-line-through">$6.00</span></p>
+                                        <p class="category-product-promo text-color-primary">Get 20% Off in App</p>
                                     </div>
                                 </a>
                             </div>
+
                         </div>
                         <div class="text-center py-5">
                             <button class="btn-default-outline">Load More</button>
@@ -272,34 +288,31 @@
         </div>
     </main>
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-title">Our Location</p>
-                <div class="footer-frame">
+        <div class="text-white py-5">
+            <div class="container">
+                <h2 class="text-center pb-4">Our Location</h2>
+                <div class="footer-frame text-center pb-4 border-bottom border-1 border-white">
                     <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
                     <p>Customer Service +6282-2876-6862</p>
                     <p>We Are Open from Sun - Mon 10 AM - 22 PM</p>
                 </div>
-                <div class="bl-media">
-                    <div class="social-media">
-                        <a href="#"><img src="images/social-media/spotify.png" alt="spotify"></a>
-                        <a href="#"><img src="images/social-media/instagram.png" alt="instagram"></a>
-                        <a href="#"><img src="images/social-media/tik-tok.png" alt="tiktok"></a>
-                        <a href="#"><img src="images/social-media/youtube.png" alt="youtube"></a>
-                        <a href="#"><img src="images/social-media/twitter.png" alt="twitter"></a>
-                        <a href="#"><img src="images/social-media/telegram.png" alt="telegram"></a>
+                <div class="mobile-app row py-4 align-items-center">
+                    <div class="social-media col-md-4 py-3 text-center text-md-start">
+                        <a href="#"><img class="me-2" src="images/social-media/spotify.png" alt="spotify"></a>
+                        <a href="#"><img class="me-2" src="images/social-media/instagram.png" alt="instagram"></a>
+                        <a href="#"><img class="me-2" src="images/social-media/tik-tok.png" alt="tiktok"></a>
+                        <a href="#"><img class="me-2" src="images/social-media/youtube.png" alt="youtube"></a>
+                        <a href="#"><img class="me-2" src="images/social-media/twitter.png" alt="twitter"></a>
+                        <a href="#"><img class="me-2" src="images/social-media/telegram.png" alt="telegram"></a>
                     </div>
-                    <div class="bl-delivery">
-                        <p>Delivery Order</p>
-                        <div>
-                            <a href="#"><img src="images/app-store.png" alt="app-store"></a>
-                            <a href="#"><img src="images/google-play.png" alt="google-play"></a>
-                        </div>
+                    <div class="col-md-8 text-center text-md-end">
+                        <a href="#"><img class="w-25 me-3" src="images/app-store.png" alt="app-store"></a>
+                        <a href="#"><img class="w-25" src="images/google-play.png" alt="google-play"></a>
                     </div>
                 </div>
-                <div class="copyright">
-                    <p>© 2023 IMAJI COFFEE, All rights reserved</p>
-                    <p>Terms and Conditions | Privacy Policy</p>
+                <div class="text-color-primary row">
+                    <p class=" col-md-6 text-center text-md-start">© 2023 IMAJI COFFEE, All rights reserved</p>
+                    <p class="col-md-6 text-center text-md-end">Terms and Conditions | Privacy Policy</p>
                 </div>
             </div>
         </div>
