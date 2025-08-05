@@ -19,68 +19,76 @@
 <body>
     <header>
         <div class="container">
-            <div class="row">
-                <div class="main-header">
-                    <div class="logo-md d-none d-md-block col-md-2"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
-                    <div class="navbar col-md-10">
-                        <div class="logo-sm d-block d-md-none"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
-                        <div class="bl-buttons-sm d-flex d-md-none">
-                            <a class="btn-cart-sm" href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span>2</span></a>
-                            <button class="btn-bar" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
+            <div class="main-header">
+                <div class="row pt-5 pb-3 d-flex align-items-center justify-content-between">
+                    <div class="logo-lg d-none d-lg-block col-lg-2"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></div>
+                    <nav class="col-lg-10 d-flex position-relative flex-wrap align-items-center justify-content-end">
+                        <div class="logo-md d-block d-lg-none me-auto"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></div>
+                        <div class="bl-buttons-md d-flex d-lg-none gap-5">
+                            <a class="btn-cart-md text-color-primary fs-2 position-relative" href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span class="fs-5">2</span></a>
+                            <button class="btn-bar border-0 bg-transparent text-dark fs-1" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
                         </div>
-                        <div class="menu">
-                            <ul class="nav-items" id="menu">
-                                <li class="nav-item"><a href="index.html">Home</a></li>
-                                <li class="nav-item"><a href="story.html">Story</a></li>
-                                <li class="nav-item"><a href="cofee.html">Menu</a></li>
-                                <li class="nav-item"><a href="#">Space</a></li>
-                                <li class="nav-item"><a href="#">Community</a></li>
-                                <li class="nav-item"><a href="news.html">News</a></li>
-                                <li class="d-md-none w-100"><a class="btn-default d-block" href="order.html">Order</a></li>
-                                <li class="d-md-none w-100"><a class="btn-default-outline d-block" href="#">Sign In</a></li>
+                        <div class="menu d-flex align-items-center gap-3">
+                            <ul class="nav-items d-none d-lg-flex align-items-center m-0 gap-3" id="menu">
+                                <li class="nav-item py-2"><a href="index.html" class="text-dark text-decoration-none position-relative">Home</a></li>
+                                <li class="nav-item py-2"><a href="story.html" class="text-dark text-decoration-none position-relative">Story</a></li>
+                                <li class="nav-item py-2"><a href="cofee.html" class="text-dark text-decoration-none position-relative">Menu</a></li>
+                                <li class="nav-item py-2"><a href="#" class="text-dark text-decoration-none position-relative">Space</a></li>
+                                <li class="nav-item py-2"><a href="event-list.html" class="text-dark text-decoration-none position-relative">Community</a></li>
+                                <li class="nav-item py-2"><a href="news.html" class="text-dark text-decoration-none position-relative">News</a></li>
+                                <li class="d-lg-none my-2 w-100"><a class="btn-default d-block" href="order.html">Order</a></li>
+                                <li class="d-lg-none my-2 w-100"><a class="btn-default-outline d-block" href="#">Sign In</a></li>
                             </ul>
-                            <div class="bl-buttons-md d-none d-md-flex">
+                            <div class="bl-buttons-lg d-none d-lg-flex align-items-center gap-3">
                                 <a class="btn-default" href="cart.html">Cart <span>(2)</span></a>
                                 <a class="btn-default-outline" href="#">Sign In</a>
                             </div>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="product-page" id="product">
+    <main class="product-page" id="product-page">
         <div class="container">
-            <div class="row">
-                <picture class="product-images col-lg-7 col-md-6 col-sm-12">
+            <div class="row pb-5">
+                <div class="product-images col-lg-7 col-md-6 col-sm-12 d-grid gap-3">
+                    <div class="thumbnail-gallery d-grid gap-3">
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab3/Product27.png" alt="Product27"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab3/Product25.png" alt="Product25"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab2/Product15.png" alt="Product15"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab3/Product28.png" alt="Product28"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab2/Product17.png" alt="Product17"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab1/Product8.png" alt="Product8"></div>
+                        <div class="image-item"><img class="w-100 object-fit-cover" src="images/products/tab2/Product13.png" alt="Product13"></div>
+                    </div>
+
                     <div class="main-image">
-                        <img src="images/products/tab3/Product27.png" alt="Product27">
+                        <img class="w-100 object-fit-cover" src="images/products/tab3/Product27.png" alt="Product27">
                     </div>
-                    <div class="thumbnail-gallery d-flex">
-                        <div class="image-item"><img src="images/products/tab3/Product27.png" alt="Product27"></div>
-                        <div class="image-item"><img src="images/products/product/Product27(1).png" alt="Product27(1)"></div>
-                        <div class="image-item"><img src="images/products/product/Product27(2).png" alt="Product27(2)"></div>
-                        <div class="image-item"><img src="images/products/product/Product27(3).png" alt="Product27(3)"></div>
-                    </div>
-                </picture>
-                <section class="product-info col-lg-5 col-md-6 col-sm-12">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
+                </div>
+
+                <div class="product-info col-lg-5 col-md-6 col-sm-12 d-flex flex-column justify-content-between">
+                    <ul class="breadcrumb fs-5 py-4 m-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="food.html">Menu</a></li>
                         <li class="active"><a href="#">Detail</a></li>
                     </ul>
 
-                    <h1 class="product-name">At Home - Classic</h1>
+                    <h1 class="fs-1 product-name">At Home - Classic</h1>
 
-                    <div class="product-price w-100">
-                        <div class="product-price-current">$5.00 <span>$6.00</span></div>
-                        <p class="promo">Get 20% Off in App</p>
+                    <div class="product-price d-sm-flex gap-3 w-100 align-items-center py-3">
+                        <div class="product-price-current fs-2 py-3 d-flex align-items-center">$5.00 <span class="text-decoration-line-through fs-4 ps-3">$6.00</span></div>
+                        <p class="promo m-0 text-color-primary">Get 20% Off in App</p>
                     </div>
 
-                    <div class="product-description">
-                        <h5>Description:</h5>
-                        <p class="hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eos voluptatum aperiam blanditiis quaerat, magnam sed optio explicabo odio. Dolorem, at doloremque. Ea incidunt consequuntur quaerat dolores commodi esse excepturi quos, dolor possimus quam magni
+                    <div class="product-description py-4">
+                        <h5 class="pb-1">Description:</h5>
+                        <p class="lh-base text-color-gray pb-3 hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id eos voluptatum aperiam blanditiis quaerat, magnam sed optio explicabo odio. Dolorem, at doloremque. Ea incidunt consequuntur quaerat dolores commodi esse excepturi quos,
+                            dolor
+                            possimus quam
+                            magni
                             amet, aspernatur
                             accusantium rem. Id debitis libero consequuntur quis cupiditate ipsa, odio, facilis in eius excepturi placeat illum quasi repellat voluptate, laborum accusamus. Laboriosam consequatur mollitia eius numquam ipsum earum vero? Vitae, obcaecati blanditiis. Unde
                             voluptatibus
@@ -89,11 +97,11 @@
                             consequatur voluptatibus expedita et quae aliquid minima, alias laborum sit! Mollitia consequatur eveniet necessitatibus minima quasi quidem aspernatur, consectetur doloremque accusamus nihil, officiis, veritatis vel perspiciatis nemo delectus recusandae! Voluptatibus
                             eligendi distinctio, omnis nemo nostrum quae in saepe consequatur explicabo voluptatem aliquam recusandae, sequi labore? Modi dicta perspiciatis nihil, doloribus voluptatibus tempora aut! Aliquam illo distinctio inventore ab eos sapiente, nemo nulla, sunt perspiciatis
                             vero aut in, ad velit. Perspiciatis earum quia inventore assumenda velit. Dolorem atque repellendus itaque autem ipsam sint laboriosam quia minus quam numquam nemo dolore, optio ducimus sit ratione iure.</p>
-                        <button class="read-more">Read more</button>
+                        <button class="read-more bg-transparent border-0 text-color-primary">Read more</button>
                     </div>
 
                     <div class="bl-action">
-                        <div class="add-cart">
+                        <div class="add-cart d-flex gap-3 pb-3">
                             <button class="btn-default-outline btn-add-to-cart">Add to Cart</button>
                             <div class="quantity-selector">
                                 <button>&minus;</button>
@@ -103,7 +111,7 @@
                         </div>
                         <a class="btn-default w-100" href="cart.html">Buy it Now</a>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
 

@@ -7,22 +7,21 @@ $(document).ready(function () {
     });
 });
 
-/***************** маленькі фото товару *******************/
-let xsImg = Array.from(document.querySelectorAll("#product .thumbnail-gallery img"));
-let xlImg = document.querySelector("#product .main-image");
-let modal = document.querySelector("#product .modal-image");
-let overlay = document.querySelector("#overlay");
+/***************** PRODUCT-PAGE / small product photos *******************/
+if (document.querySelector("#product-page")) {
+    let xsImg = Array.from(document.querySelectorAll("#product-page .thumbnail-gallery img"));
+    const xlImg = document.querySelector("#product-page .main-image");
 
-for (let i = 0; i < xsImg.length; i++) {
-    xsImg[i].onclick = function () {
-        xlImg.innerHTML = xsImg[i].outerHTML;
-        modal.innerHTML = xsImg[i].outerHTML;
+    for (let i = 0; i < xsImg.length; i++) {
+        xsImg[i].onclick = function () {
+            xlImg.innerHTML = xsImg[i].outerHTML;
+        }
     }
 }
 
 /**************** читати більше в карточці товару ******************/
-let readBtn = document.querySelector("#product .product-info .product-description .read-more");
-let descr = document.querySelector("#product .product-info .product-description p");
+let readBtn = document.querySelector("#product-page .product-info .product-description .read-more");
+let descr = document.querySelector("#product-page .product-info .product-description p");
 if (readBtn) {
     readBtn.onclick = () => {
         if (descr.classList.contains("hide")) {
@@ -35,7 +34,7 @@ if (readBtn) {
 }
 
 /******************* модальне вікно про додавання товару ***************** */
-let btnAdd = document.querySelector("#product .product-info .bl-action .btn-add-to-cart");
+let btnAdd = document.querySelector("#product-page .product-info .bl-action .btn-add-to-cart");
 if (btnAdd) {
     btnAdd.onclick = () => {
         document.querySelector(".product-added-modal").classList.add("d-block");
@@ -87,5 +86,29 @@ if (window.location.href.includes("index")) {
 
     window.addEventListener('resize', () => {
         resizeHeight();
+    });
+}
+
+/***************** PRODUCT-PAGE / resizing ".thumbnail-gallery" height ******************/
+if (document.querySelector("#product-page")) {
+    const mainImg = document.querySelector(".main-image img");
+    const gallery = document.querySelector(".thumbnail-gallery");
+
+    if (window.innerWidth > 992) {
+        galleryHeight();
+    }
+
+
+    function galleryHeight() {
+        gallery.style.height = Math.round(mainImg.offsetHeight) + 'px';
+    }
+
+    window.addEventListener('resize', () => {
+
+        if (window.innerWidth > 992) {
+            galleryHeight();
+        } else {
+            gallery.style.height = '';
+        }
     });
 }

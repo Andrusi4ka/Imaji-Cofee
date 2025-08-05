@@ -21,19 +21,3 @@
         color: $color-primary;
     }
 }
-
-@mixin order-model {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-@mixin section-model {
-    width: 70%;
-    padding: 50px 30px 50px 0;
-
-    @media (max-width: $medium) {
-        width: 100%;
-        padding: 0;
-    }
-}
