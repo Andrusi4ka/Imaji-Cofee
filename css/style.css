@@ -162,6 +162,9 @@ input {
   width: 100%;
   padding: 12px;
   border: 1px solid #272727;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 @media (max-width: 992px) {
