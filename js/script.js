@@ -1,11 +1,15 @@
 /******************* випадаюче меню *********************/
-$(document).ready(function () {
-    $('#menu-bar').on("click", function () {
-        $('#menu').toggleClass('menu-tablet');
-        $('#menu').toggleClass('d-none');
-        $('header').toggleClass('menu-tablet-background');
-    });
-});
+if (document.querySelector("#menu-bar")) {
+    const menu = document.querySelector("#menu");
+    const header = document.querySelector("header");
+
+    document.querySelector("#menu-bar").onclick = function () {
+        menu.classList.toggle('menu-tablet');
+        menu.classList.toggle('d-none');
+        header.classList.toggle('menu-tablet-background');
+    }
+}
+
 
 /***************** PRODUCT-PAGE / small product photos *******************/
 if (document.querySelector("#product-page")) {
@@ -20,58 +24,72 @@ if (document.querySelector("#product-page")) {
 }
 
 /**************** читати більше в карточці товару ******************/
-let readBtn = document.querySelector("#product-page .product-info .product-description .read-more");
-let descr = document.querySelector("#product-page .product-info .product-description p");
-if (readBtn) {
-    readBtn.onclick = () => {
-        if (descr.classList.contains("hide")) {
-            readBtn.innerHTML = "Read less";
-        } else {
-            readBtn.innerHTML = "Read more";
+if (document.querySelector("#product-page")) {
+    const readBtn = document.querySelector("#product-page .product-info .product-description .read-more");
+    const descr = document.querySelector("#product-page .product-info .product-description p");
+    if (readBtn) {
+        readBtn.onclick = () => {
+            if (descr.classList.contains("hide")) {
+                readBtn.innerHTML = "Read less";
+            } else {
+                readBtn.innerHTML = "Read more";
+            }
+            descr.classList.toggle("hide");
         }
-        descr.classList.toggle("hide");
     }
 }
+
 
 /******************* модальне вікно про додавання товару ***************** */
-let btnAdd = document.querySelector("#product-page .product-info .bl-action .btn-add-to-cart");
-if (btnAdd) {
-    btnAdd.onclick = () => {
-        document.querySelector(".product-added-modal").classList.add("d-block");
-        setTimeout(() => {
-            document.querySelector(".product-added-modal").classList.remove("d-block");
-        }, 4000);
-    }
+if (document.querySelector("#product-page")) {
+    let btnAdd = document.querySelector("#product-page .product-info .bl-action .btn-add-to-cart");
+    let overlay = document.querySelector('.overlay');
 
-    document.querySelector(".product-added-modal .modal-close").onclick = () => {
-        document.querySelector(".product-added-modal").classList.remove("d-block");
+    if (btnAdd) {
+        btnAdd.onclick = () => {
+            document.querySelector(".product-added-modal").classList.add("d-block");
+            overlay.classList.add("d-block");
+
+            setTimeout(() => {
+                document.querySelector(".product-added-modal").classList.remove("d-block");
+                overlay.classList.remove("d-block");
+            }, 4000);
+        }
+
+        document.querySelector(".product-added-modal .modal-close").onclick = () => {
+            document.querySelector(".product-added-modal").classList.remove("d-block");
+            overlay.classList.remove("d-block");
+        }
     }
 }
+
 
 /**************** модальне вікно Discount Promo ********************/
-let modalPromo = document.querySelector('#promo-modal');
-let promoClose = document.querySelector('#promo-close');
-let btnPromo = document.querySelector('#btn-promo');
+if (document.querySelector("#cart-page")) {
+    let modalPromo = document.querySelector('#promo-modal');
+    let promoClose = document.querySelector('#promo-close');
+    let btnPromo = document.querySelector('#btn-promo');
+    let overlay = document.querySelector('.overlay');
 
 
-if (btnPromo) {
-    btnPromo.onclick = function () {
-        modalPromo.classList.add('d-block');
-        overlay.classList.add('d-block');
-        document.body.style.overflow = 'hidden';
+    if (btnPromo) {
+        btnPromo.onclick = function () {
+            modalPromo.classList.add('d-block');
+            overlay.classList.add('d-block');
+        }
+    }
+
+    if (promoClose) {
+        promoClose.onclick = function () {
+            modalPromo.classList.remove('d-block');
+            overlay.classList.remove('d-block');
+        };
     }
 }
 
-if (promoClose) {
-    promoClose.onclick = function () {
-        modalPromo.classList.remove('d-block');
-        overlay.classList.remove('d-block');
-        document.body.style.overflow = '';
-    };
-}
 
 /*************** HOME PAGE ****************/
-if (window.location.href.includes("index")) {
+if (document.querySelector("#home-page")) {
     const appItems = document.querySelector(".app-items");
     const mainApp = document.querySelector(".main-app");
     const mainWorkspace = document.querySelector(".comfy-workspace");
