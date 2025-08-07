@@ -40,54 +40,6 @@ if (document.querySelector("#product-page")) {
 }
 
 
-/******************* модальне вікно про додавання товару ***************** */
-if (document.querySelector("#product-page")) {
-    let btnAdd = document.querySelector("#product-page .product-info .bl-action .btn-add-to-cart");
-    let overlay = document.querySelector('.overlay');
-
-    if (btnAdd) {
-        btnAdd.onclick = () => {
-            document.querySelector(".product-added-modal").classList.add("d-block");
-            overlay.classList.add("d-block");
-
-            setTimeout(() => {
-                document.querySelector(".product-added-modal").classList.remove("d-block");
-                overlay.classList.remove("d-block");
-            }, 4000);
-        }
-
-        document.querySelector(".product-added-modal .modal-close").onclick = () => {
-            document.querySelector(".product-added-modal").classList.remove("d-block");
-            overlay.classList.remove("d-block");
-        }
-    }
-}
-
-
-/**************** модальне вікно Discount Promo ********************/
-if (document.querySelector("#cart-page")) {
-    let modalPromo = document.querySelector('#promo-modal');
-    let promoClose = document.querySelector('#promo-close');
-    let btnPromo = document.querySelector('#btn-promo');
-    let overlay = document.querySelector('.overlay');
-
-
-    if (btnPromo) {
-        btnPromo.onclick = function () {
-            modalPromo.classList.add('d-block');
-            overlay.classList.add('d-block');
-        }
-    }
-
-    if (promoClose) {
-        promoClose.onclick = function () {
-            modalPromo.classList.remove('d-block');
-            overlay.classList.remove('d-block');
-        };
-    }
-}
-
-
 /*************** HOME PAGE ****************/
 if (document.querySelector("#home-page")) {
     const appItems = document.querySelector(".app-items");

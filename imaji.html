@@ -25,7 +25,10 @@
                     <nav class="col-lg-10 d-flex position-relative flex-wrap align-items-center justify-content-end">
                         <div class="logo-md d-block d-lg-none me-auto"><a href="index.html"><img class="w-100" src="images/logo.png" alt="Imaji-Cofee"></a></div>
                         <div class="bl-buttons-md d-flex d-lg-none gap-5">
-                            <a class="btn-cart-md text-color-primary fs-2 position-relative" href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span class="fs-5">2</span></a>
+
+                            <!-- <a class="btn-cart-md text-color-primary fs-2 position-relative" href="cart.html"><i class="fa-solid fa-basket-shopping"></i> <span class="fs-5">2</span></a> -->
+                            <button class="btn-cart-md text-color-primary fs-2 position-relative border-0 bg-transparent" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart"><i class="fa-solid fa-basket-shopping"></i> <span class="fs-5">2</span></button>
+
                             <button class="btn-bar border-0 bg-transparent text-dark fs-1" id="menu-bar"><i class="fa-solid fa-bars"></i></button>
                         </div>
                         <div class="menu d-flex align-items-center gap-3">
@@ -37,11 +40,14 @@
                                 <li class="nav-item py-2"><a href="event-list.html" class="text-dark text-decoration-none position-relative">Community</a></li>
                                 <li class="nav-item py-2"><a href="news.html" class="text-dark text-decoration-none position-relative">News</a></li>
                                 <li class="d-lg-none my-2 w-100"><a class="btn-default d-block" href="order.html">Order</a></li>
-                                <li class="d-lg-none my-2 w-100"><a class="btn-default-outline d-block" href="#">Sign In</a></li>
+                                <li class="d-lg-none my-2 w-100"><a class="btn-default-outline d-block" href="sign-in.html">Sign In</a></li>
                             </ul>
                             <div class="bl-buttons-lg d-none d-lg-flex align-items-center gap-3">
-                                <a class="btn-default" href="cart.html">Cart <span>(2)</span></a>
-                                <a class="btn-default-outline" href="#">Sign In</a>
+
+                                <!-- <a class="btn-default" href="cart.html">Cart <span>(2)</span></a> -->
+                                <button class="btn-default" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-cart">Cart <span>(2)</span></button>
+
+                                <a class="btn-default-outline" href="sign-in.html">Sign In</a>
                             </div>
                         </div>
                     </nav>
@@ -49,6 +55,7 @@
             </div>
         </div>
     </header>
+
     <main class="menu-page">
         <div class="container">
             <div class="row">
@@ -287,6 +294,137 @@
             </div>
         </div>
     </main>
+
+    <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="offcanvas-cart">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+
+            <div class="cart-page d-flex flex-column h-100">
+                <div class="content px-5 pb-5">
+                    <h2 class="pb-3">My Cart</h2>
+                    <div class="cart-items-grid">
+                        <div class="cart-header d-none d-md-grid pb-2">
+                            <p class="m-0 fw-bold">Product</p>
+                            <p class="m-0 fw-bold">Price</p>
+                            <p class="m-0 fw-bold">Quantity</p>
+                            <p class="m-0 fw-bold">Subtotal</p>
+                        </div>
+                        <div class="cart-item d-grid py-3">
+                            <img class="py-1" src="images/products/tab3/Product27.png" alt="Product27">
+                            <div class="ps-3 cart-item-info">
+                                <div>
+                                    <a href="product.html" class="text-decoration-none text-dark">
+                                        <p class="m-0 py-1">At Home - Classic</p>
+                                        <p class="m-0 py-1 text-color-gray text_category">Imaji Coffee at home</p>
+                                    </a>
+                                    <p class="d-block d-md-none py-1 m-0">$5.00</p>
+                                    <div class="d-flex d-md-none gap-3 py-2 align-items-center justify-content-start">
+                                        <div class="quantity-selector m-0">
+                                            <button>&minus;</button>
+                                            <input type="text" value="1">
+                                            <button>+</button>
+                                        </div>
+                                        <p class="py-0 m-0 fs-3">$5.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block text-center fs-5">$5.00</p>
+                            <div class="d-none d-md-block">
+                                <div class="quantity-selector">
+                                    <button>&minus;</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block ms-auto fs-5">$5.00</p>
+                        </div>
+                        <div class="d-grid cart-item py-3">
+                            <img class="py-1" src="images/products/tab1/Product7.png" alt="Product27">
+                            <div class="ps-3 cart-item-info">
+                                <div>
+                                    <a href="product.html" class="text-decoration-none text-dark">
+                                        <p class="m-0 py-1">At Home - Kalosi</p>
+                                        <p class="m-0 py-1 text-color-gray text_category">Imaji Coffee at home</p>
+                                    </a>
+                                    <p class="d-block d-md-none py-1 m-0">$5.00</p>
+                                    <div class="d-flex d-md-none gap-3 py-2 align-items-center justify-content-start">
+                                        <div class="quantity-selector m-0">
+                                            <button>&minus;</button>
+                                            <input type="text" value="1">
+                                            <button>+</button>
+                                        </div>
+                                        <p class="py-0 m-0 fs-3">$5.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block text-center fs-5">$5.00</p>
+                            <div class="d-none d-md-block">
+                                <div class="quantity-selector">
+                                    <button>&minus;</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block ms-auto fs-5">$5.00</p>
+                        </div>
+                        <div class="d-grid cart-item py-3">
+                            <img class="py-1" src="images/products/tab2/Product21.png" alt="Product27">
+                            <div class="ps-3 cart-item-info">
+                                <div>
+                                    <a href="product.html" class="text-decoration-none text-dark">
+                                        <p class="m-0 py-1">At Home - House Blend</p>
+                                        <p class="m-0 py-1 text-color-gray text_category">Imaji Coffee at home</p>
+                                    </a>
+                                    <p class="d-block d-md-none py-1 m-0">$5.00</p>
+                                    <div class="d-flex d-md-none gap-3 py-2 align-items-center justify-content-start">
+                                        <div class="quantity-selector m-0">
+                                            <button>&minus;</button>
+                                            <input type="text" value="1">
+                                            <button>+</button>
+                                        </div>
+                                        <p class="py-0 m-0 fs-3">$5.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block text-center fs-5">$5.00</p>
+                            <div class="d-none d-md-block">
+                                <div class="quantity-selector">
+                                    <button>&minus;</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <p class="m-0 d-none d-md-block ms-auto fs-5">$5.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offcanvas-cart-summary mt-auto bg-primary-light p-5">
+                    <h3 class="pb-3">Summary</h3>
+                    <div class="order-info">
+                        <div class="d-flex justify-content-between">
+                            <p class="text-color-gray">Subtotal</p>
+                            <p>$14.00</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="text-color-gray">Tax (10%)</p>
+                            <p>$1.4</p>
+                        </div>
+                    </div>
+
+                    <div class="cart-total-label">
+                        <p>Total</p>
+                        <p>$15.4</p>
+                    </div>
+                    <a class="btn-default" href="checkout-checkout.html">Checkout</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="text-white py-5">
             <div class="container">
