@@ -1,9 +1,7 @@
 # Верстка сайту за макетом
-[Imaji-Cofee](https://andrusi4ka.github.io/Imaji-Cofee/)
 
-<<<<<<< HEAD
 ![Screen!](images/Imaji-Cofee.png)
-=======
+
 **[Результат домашнього завдання](https://andrusi4ka.github.io/Imaji-Cofee/)**<br><br>
 
 ___
@@ -63,4 +61,3 @@ ___
 2. Відкрийте файл index.html у браузері.
 
 3. На сайті підключено зовнішні бібліотеки (Font Awesome, Bootstrap через CDN), переконайтесь, що є доступ до інтернету.
->>>>>>> d70fc010b6a83924a16743fe115886d6f1cbcacc
