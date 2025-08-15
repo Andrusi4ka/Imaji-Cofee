@@ -187,6 +187,14 @@ body {
         accent-color: $color-primary;
         cursor: pointer;
     }
+
+    .eye {
+        position: absolute;
+        top: 50%;
+        right: 0.25rem;
+        transform: translate(-50%);
+        cursor: pointer;
+    }
 }
 
 /***************** HEADER *****************/
@@ -402,6 +410,8 @@ body {
         }
 
         .main-image {
+            cursor: pointer;
+
             img {
                 aspect-ratio: 4 / 6;
 
@@ -433,6 +443,33 @@ body {
                 @at-root .quantity-selector {
                     @include quantity;
                 }
+            }
+        }
+    }
+}
+
+/********** PRODUCT-IMAGE-MODAL ***********/
+#product-image-modal {
+    .modal-custom {
+        max-width: none;
+        min-height: auto;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .modal-content {
+            .modal-body {
+                img {
+                    max-height: 95vh;
+                    display: block;
+
+                    @media (orientation: portrait) {
+                        max-width: none;
+                        max-width: 95vw;
+                    }
+                }
+
             }
         }
     }
@@ -573,7 +610,7 @@ body {
         }
 
         @media (max-width: $medium) {
-            width: 100% !important;
+            width: 90% !important;
         }
 
         .offcanvas-cart-summary {
@@ -802,23 +839,46 @@ footer {
             border-radius: 25%;
             margin: 0 auto;
             box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.8) inset;
-            width: 300px;
+            animation: fadeUt 1s;
+            animation-direction: normal;
+            animation-iteration-count: 100%;
+            animation-fill-mode: forwards;
+
+            @keyframes fadeUt {
+                0% {
+                    width: 0;
+                    height: 0;
+                }
+
+                100% {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
 
             .circle circle {
                 transform-origin: 50% 50%;
-                animation: scale 3s infinite ease-in-out;
+                transform: scale(0);
+                animation: growIn 1s ease-out forwards, pulse 3s infinite ease-in-out;
+                animation-delay: 0.6s, 1.3s;
                 stroke-opacity: 0.2;
             }
 
-            @keyframes scale {
+            @keyframes growIn {
+                to {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes pulse {
 
                 0%,
                 100% {
-                    transform: scale(0.75);
+                    transform: scale(1);
                 }
 
                 50% {
-                    transform: scale(1);
+                    transform: scale(0.75);
                 }
             }
 
@@ -986,44 +1046,26 @@ footer {
         background-color: $color-primary-light;
 
         .workspaces {
+            padding-bottom: 5rem;
+
             .workspace-items {
-                overflow: hidden;
-                overflow-x: auto;
-                scrollbar-width: none;
-                white-space: nowrap;
-                gap: 3rem;
-
-                @media (max-width: $large) {
-                    gap: 1.5rem;
-                }
-
                 .slide-item {
-                    min-width: 20%;
+                    object-fit: cover;
+                    width: 100%;
+                    aspect-ratio: 2/3;
 
-                    @media (max-width: $large) {
-                        min-width: 25%;
-                    }
-
-                    @media (max-width: $medium) {
-                        min-width: 40%;
-                    }
-
-                    @media (max-width: $small) {
-                        min-width: 70%;
-                    }
                 }
             }
 
-            .indicators {
-                .indicator-item {
-                    width: 20px;
-                    height: 20px;
-                    background-color: $color-gray-light;
-                    border-radius: 50%;
-                }
+            .workspace-indicators {
+                bottom: 1.5rem;
 
-                .active {
+                .swiper-pagination-bullet {
+                    width: 1rem;
+                    height: 1rem;
                     background-color: $color-primary;
+                    border-radius: 50%;
+                    margin: 0 0.4rem 0;
                 }
             }
         }
@@ -1169,6 +1211,10 @@ footer {
     .onboard-banner {
         background-color: $color-primary-light;
         min-height: 90vh;
+
+        @media (max-width: $small) {
+            min-height: 100vh;
+        }
 
         .onboard-status {
             div {

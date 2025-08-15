@@ -159,6 +159,13 @@ body input[type=checkbox] {
   accent-color: #A27B5C;
   cursor: pointer;
 }
+body .eye {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  transform: translate(-50%);
+  cursor: pointer;
+}
 
 /***************** HEADER *****************/
 .main-header nav .logo-md {
@@ -325,6 +332,9 @@ body input[type=checkbox] {
 .product-page .product-images .thumbnail-gallery img {
   aspect-ratio: 1/1;
 }
+.product-page .product-images .main-image {
+  cursor: pointer;
+}
 .product-page .product-images .main-image img {
   aspect-ratio: 4/6;
 }
@@ -361,6 +371,26 @@ body input[type=checkbox] {
   text-align: center;
   border: none;
   color: #A27B5C;
+}
+
+/********** PRODUCT-IMAGE-MODAL ***********/
+#product-image-modal .modal-custom {
+  max-width: none;
+  min-height: auto;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#product-image-modal .modal-custom .modal-content .modal-body img {
+  max-height: 95vh;
+  display: block;
+}
+@media (orientation: portrait) {
+  #product-image-modal .modal-custom .modal-content .modal-body img {
+    max-width: none;
+    max-width: 95vw;
+  }
 }
 
 /**************** OVERLAY *****************/
@@ -475,7 +505,7 @@ aside .form-promo-code form input {
 }
 @media (max-width: 992px) {
   .offcanvas-cart {
-    width: 100% !important;
+    width: 90% !important;
   }
 }
 .offcanvas-cart .offcanvas-cart-summary {
@@ -650,19 +680,39 @@ footer {
   border-radius: 25%;
   margin: 0 auto;
   box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0.8) inset;
-  width: 300px;
+  animation: fadeUt 1s;
+  animation-direction: normal;
+  animation-iteration-count: 100%;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeUt {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+  }
 }
 .order-page .thanks .main-confirmation-img .circle circle {
   transform-origin: 50% 50%;
-  animation: scale 3s infinite ease-in-out;
+  transform: scale(0);
+  animation: growIn 1s ease-out forwards, pulse 3s infinite ease-in-out;
+  animation-delay: 0.6s, 1.3s;
   stroke-opacity: 0.2;
 }
-@keyframes scale {
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
   0%, 100% {
-    transform: scale(0.75);
+    transform: scale(1);
   }
   50% {
-    transform: scale(1);
+    transform: scale(0.75);
   }
 }
 .order-page .thanks .main-confirmation-img i {
@@ -793,44 +843,23 @@ footer {
 .home-page .comfy-workspace {
   background-color: #FCF7EF;
 }
-.home-page .comfy-workspace .workspaces .workspace-items {
-  overflow: hidden;
-  overflow-x: auto;
-  scrollbar-width: none;
-  white-space: nowrap;
-  gap: 3rem;
-}
-@media (max-width: 1200px) {
-  .home-page .comfy-workspace .workspaces .workspace-items {
-    gap: 1.5rem;
-  }
+.home-page .comfy-workspace .workspaces {
+  padding-bottom: 5rem;
 }
 .home-page .comfy-workspace .workspaces .workspace-items .slide-item {
-  min-width: 20%;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 2/3;
 }
-@media (max-width: 1200px) {
-  .home-page .comfy-workspace .workspaces .workspace-items .slide-item {
-    min-width: 25%;
-  }
+.home-page .comfy-workspace .workspaces .workspace-indicators {
+  bottom: 1.5rem;
 }
-@media (max-width: 992px) {
-  .home-page .comfy-workspace .workspaces .workspace-items .slide-item {
-    min-width: 40%;
-  }
-}
-@media (max-width: 768px) {
-  .home-page .comfy-workspace .workspaces .workspace-items .slide-item {
-    min-width: 70%;
-  }
-}
-.home-page .comfy-workspace .workspaces .indicators .indicator-item {
-  width: 20px;
-  height: 20px;
-  background-color: #e2e2e2;
-  border-radius: 50%;
-}
-.home-page .comfy-workspace .workspaces .indicators .active {
+.home-page .comfy-workspace .workspaces .workspace-indicators .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
   background-color: #A27B5C;
+  border-radius: 50%;
+  margin: 0 0.4rem 0;
 }
 .home-page .main-grow .grow-text {
   width: 35%;
@@ -939,6 +968,11 @@ footer {
 .onboarding-page .onboard-banner {
   background-color: #FCF7EF;
   min-height: 90vh;
+}
+@media (max-width: 768px) {
+  .onboarding-page .onboard-banner {
+    min-height: 100vh;
+  }
 }
 .onboarding-page .onboard-banner .onboard-status div {
   flex: 1;
